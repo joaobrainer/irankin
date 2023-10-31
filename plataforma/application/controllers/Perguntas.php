@@ -985,6 +985,25 @@ class Perguntas extends CI_Controller {
 
 	}
 
+	public function todasRespostas() { 
+		
+		$respostas = $this->input->post('historia');
+	
+
+		if (count($respostas) > 0) {
+
+			$removedItem = array_shift($respostas);
+
+			$this->session->set_userdata('respostas_historia_usuario', $respostas);
+
+			redirect('perguntas/'.$removedItem);
+		}else{
+			$this->session->set_flashdata('error', 'error');
+			redirect('perguntas/9');
+		}
+		
+	}
+
 
 
 

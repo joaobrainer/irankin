@@ -99,7 +99,7 @@
 
 .iconeperguntas{
 	padding-top: 4rem;
-	height: 15rem;
+	height: 15rem !important;
 }
 #perguntas input[type="radio"] {
 	visibility: hidden;
@@ -202,6 +202,21 @@
 	margin-top: 1rem;
 	border: 0px;
 	opacity: 0.5;
+}
+.texticonesselecionaveis2{
+	border-radius: 15px;
+	color: #121212;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0.5rem;
+	margin-top: 1rem;
+	border: 0px;
+	opacity: 0.5;
+	background-color: #DAE3F3;
+	cursor: pointer;
+}
+#perguntas [type="checkbox"] .texticonesselecionaveis2:checked{
+	opacity: 1;
 }
 #perguntas [type="checkbox"] .texticonesselecionaveis:checked{
 	opacity: 1;
