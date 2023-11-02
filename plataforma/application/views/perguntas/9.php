@@ -40,7 +40,7 @@
 				<?php echo form_open("perguntas/todasRespostas", 'id="formprincipal"'); ?>
 
 				<div class="row">
-										
+					<?php if ($walking == 'sim') { ?>						
 						<div class="col-md-6 colmd6mobile50wd" style='cursor: pointer;' >
 							<label for="16">
 							<input type="checkbox" name="historia[]" id="16" value="16">
@@ -52,9 +52,9 @@
 								<?php } ?>
 							</label>						
 						</div>						
-					
+					<?php } ?>
 
-					
+					<?php if ($using_the_toilet == 'sim') { ?>
 						<div class="col-md-6 colmd6mobile50wd" style='cursor: pointer;'>
 							<label for="13">
 							<input type="checkbox" name="historia[]" id="13" value="13">
@@ -66,9 +66,9 @@
 								<?php } ?>
 							</label>
 						</div>
-					
+					<?php } ?>
 
-					
+					<?php if ($routine_daily_hygiene == 'sim') { ?>
 						<div class="col-md-6 colmd6mobile50wd" style='cursor: pointer;'>
 							<label for="14">
 							<input type="checkbox" name="historia[]" id="14" value="14">
@@ -80,9 +80,9 @@
 								<?php } ?>
 							</label>
 						</div>
-					
+					<?php } ?>
 
-					
+					<?php if ($eating == 'sim') { ?>
 						<div class="col-md-6 colmd6mobile50wd" style='cursor: pointer;'>
 							<label for="11">
 							<input type="checkbox" name="historia[]" id="11" value="11">
@@ -94,9 +94,9 @@
 								<?php } ?>
 							</label>
 						</div>
-					
+					<?php } ?>
 
-					
+					<?php if ($household_chores == 'sim') { ?>
 						<div class="col-md-6 colmd6mobile50wd" style='cursor: pointer;'>
 							<label for="19">
 								<input type="checkbox" name="historia[]" id="19" value="19">
@@ -108,9 +108,9 @@
 								<?php } ?>
 							</label>
 						</div>
-					
+					<?php } ?>
 
-					
+					<?php if ($household_expenses == 'sim') { ?>
 						<div class="col-md-6 colmd6mobile50wd" style='cursor: pointer;'>
 							<label for="21">
 								<input type="checkbox" name="historia[]" id="21" value="21">
@@ -122,9 +122,9 @@
 								<?php } ?>
 							</label>
 						</div>
-					
+					<?php } ?>
 
-					
+					<?php if ($local_traveling == 'sim') { ?>
 						<div class="col-md-6 colmd6mobile50wd" style='cursor: pointer;'>
 							<label for="23">
 								<input type="checkbox" name="historia[]" id="23" value="23">
@@ -136,9 +136,9 @@
 								<?php } ?>
 							</label>
 						</div>
-					
+					<?php } ?>
 
-					
+					<?php if ($local_shopping == 'sim') { ?>
 						<div class="col-md-6 colmd6mobile50wd" style='cursor: pointer;'>
 							<label for="25">
 								<input type="checkbox" name="historia[]" id="25" value="25">
@@ -150,9 +150,9 @@
 								<?php } ?>
 							</label>
 						</div>
-					
+					<?php } ?>
 				
-					
+					<?php if ($looking_after_family == 'sim') { ?>
 						<div class="col-md-6 colmd6mobile50wd" style='cursor: pointer;'>
 							<label for="27">
 								<input type="checkbox" name="historia[]" id="27" value="27">
@@ -164,9 +164,9 @@
 								<?php } ?>
 							</label>
 						</div>
-					
+					<?php } ?>
 
-					
+					<?php if ($social_activities == 'sim') { ?>
 						<div class="col-md-6 colmd6mobile50wd" style='cursor: pointer;'>
 							<label for="29">
 								<input type="checkbox" name="historia[]" id="29" value="29">
@@ -178,10 +178,10 @@
 								<?php } ?>
 							</label>
 						</div>
-					
+					<?php } ?>
 				
 
-					
+					<?php if ($relationships == 'sim') { ?>
 						<div class="col-md-6 colmd6mobile50wd" style='cursor: pointer;'>
 							<label for="31">
 								<input type="checkbox" name="historia[]" id="31" value="31">
@@ -193,9 +193,9 @@
 								<?php } ?>
 							</label>
 						</div>
-					
+					<?php } ?>
 
-					
+					<?php if ($working == 'sim') { ?>
 						<div class="col-md-6 colmd6mobile50wd" style='cursor: pointer;'>
 							<label for="33">
 								<input type="checkbox" name="historia[]" id="33" value="33">
@@ -207,9 +207,9 @@
 								<?php } ?>
 							</label>
 						</div>
-					
+					<?php } ?>
 
-					
+					<?php if ($studying == 'sim') { ?>
 						<div class="col-md-6 colmd6mobile50wd" style='cursor: pointer;'>
 							<label for="35">
 								<input type="checkbox" name="historia[]" id="35" value="35">
@@ -221,9 +221,9 @@
 								<?php } ?>
 							</label>
 						</div>
-					
+					<?php } ?>
 
-					
+					<?php if ($home_activities == 'sim') { ?>
 						<div class="col-md-6 colmd6mobile50wd" style='cursor: pointer;'>
 							<label for="42">
 								<input type="checkbox" name="historia[]" id="42" value="42">
@@ -235,7 +235,7 @@
 								<?php } ?>
 							</label>
 						</div>
-					
+					<?php } ?>
 
 				</div>
 
