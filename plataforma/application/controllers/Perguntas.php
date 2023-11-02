@@ -230,10 +230,10 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			$this->session->set_userdata('pontuacao', '4');
-			redirect('pontuacao');
+			$this->adicionaPontuacao('4');
+			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
-			redirect('perguntas/12');
+			$this->adicionaResposta('12');
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -256,11 +256,11 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			$this->session->set_userdata('pontuacao', '3');
-			redirect('pontuacao');
+			$this->adicionaPontuacao('3');
+			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
-			$this->session->set_userdata('pontuacao', '2');
-			redirect('pontuacao');
+			$this->adicionaPontuacao('2');
+			$this->validaRespostas();
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -283,17 +283,11 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			// $this->session->set_userdata('pontuacao', '4');
-			// redirect('pontuacao');
-
 			$this->adicionaPontuacao('4');
 			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
-
 			$this->adicionaPontuacao('2');
 			$this->validaRespostas();
-			// $this->session->set_userdata('pontuacao', '2');
-			// redirect('pontuacao');
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -318,11 +312,8 @@ class Perguntas extends CI_Controller {
 		if ($primeira == 'Sim') {
 			$this->adicionaPontuacao('4');
 			$this->validaRespostas();
-			// $this->session->set_userdata('pontuacao', '4');
-			// redirect('pontuacao');
 		} elseif ($primeira == 'Não') {
 			$this->adicionaResposta('15');
-			// redirect('perguntas/15');
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -345,15 +336,11 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			// $this->session->set_userdata('pontuacao', '3');
-			// redirect('pontuacao');
 			$this->adicionaPontuacao('3');
 			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->adicionaPontuacao('2');
 			$this->validaRespostas();
-			// $this->session->set_userdata('pontuacao', '2');
-			// redirect('pontuacao');
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -401,19 +388,11 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			$this->session->set_userdata('pontuacao', '3');
-
 			$this->adicionaPontuacao('3');
 			$this->validaRespostas();
-			
-			// redirect('pontuacao');
 		} elseif ($primeira == 'Não') {
-			$this->session->set_userdata('pontuacao', '2');
-
 			$this->adicionaPontuacao('2');
 			$this->validaRespostas();
-			
-			// redirect('pontuacao');
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -436,10 +415,10 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			$this->session->set_userdata('pontuacao', '4');
-			redirect('pontuacao');
+			$this->adicionaPontuacao('4');
+			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
-			redirect('perguntas/17');
+			$this->adicionaResposta('17');
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -462,12 +441,9 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			// $this->session->set_userdata('pontuacao', '3');
-			// redirect('pontuacao');
 			$this->adicionaPontuacao('3');
 			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
-			// redirect('perguntas/20');
 			$this->adicionaResposta('20');
 		} else {
 			$this->session->set_flashdata('error', 'error');
@@ -491,13 +467,10 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			// $this->session->set_userdata('pontuacao', '2');
-			// redirect('pontuacao');
 			$this->adicionaPontuacao('2');
 			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
-			$this->session->set_flashdata('error', 'error');
-			redirect('perguntas/9');
+			$this->validaRespostas();
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -520,10 +493,10 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			redirect('perguntas/22');
+			$this->adicionaResposta('22');
 		} elseif ($primeira == 'Não') {
-			$this->session->set_userdata('pontuacao', '3');
-			redirect('pontuacao');
+			$this->adicionaPontuacao('3');
+			$this->validaRespostas();
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -546,11 +519,10 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			$this->session->set_userdata('pontuacao', '2');
-			redirect('pontuacao');
+			$this->adicionaPontuacao('2');
+			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
-			$this->session->set_flashdata('error', 'error');
-			redirect('perguntas/9');
+			$this->validaRespostas();
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -573,12 +545,9 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			// $this->session->set_userdata('pontuacao', '3');
-			// redirect('pontuacao');
 			$this->adicionaPontuacao('3');
 			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
-			// redirect('perguntas/24');
 			$this->adicionaResposta('24');
 		} else {
 			$this->session->set_flashdata('error', 'error');
@@ -602,13 +571,10 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			// $this->session->set_userdata('pontuacao', '2');
-			// redirect('pontuacao');
 			$this->adicionaPontuacao('2');
 			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
-			$this->session->set_flashdata('error', 'error');
-			redirect('perguntas/9');
+			$this->validaRespostas();
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -631,11 +597,8 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			// redirect('perguntas/26');
 			$this->adicionaResposta('26');
 		} elseif ($primeira == 'Não') {
-			// $this->session->set_userdata('pontuacao', '3');
-			// redirect('pontuacao');
 			$this->adicionaPontuacao('3');
 			$this->validaRespostas();
 		} else {
@@ -660,13 +623,10 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			// $this->session->set_userdata('pontuacao', '2');
-			// redirect('pontuacao');
 			$this->adicionaPontuacao('2');
 			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
-			$this->session->set_flashdata('error', 'error');
-			redirect('perguntas/9');
+			$this->validaRespostas();
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -689,10 +649,9 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			redirect('perguntas/28');
+			$this->adicionaResposta('28');
 		} elseif ($primeira == 'Não') {
-			$this->session->set_flashdata('error', 'error');
-			redirect('perguntas/9');
+			$this->validaRespostas();
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -715,11 +674,11 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			$this->session->set_userdata('pontuacao', '2');
-			redirect('pontuacao');
+			$this->adicionaPontuacao('2');
+			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
-			$this->session->set_userdata('pontuacao', '3');
-			redirect('pontuacao');
+			$this->adicionaPontuacao('3');
+			$this->validaRespostas();
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -742,10 +701,9 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			$this->session->set_flashdata('error', 'error');
-			redirect('perguntas/9');
+			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
-			redirect('perguntas/30');
+			$this->adicionaResposta('30');
 		}
 
 	}
@@ -765,11 +723,10 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			$this->session->set_userdata('pontuacao', '2');
-			redirect('pontuacao');
+			$this->adicionaPontuacao('2');
+			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
-			$this->session->set_flashdata('error', 'error');
-			redirect('perguntas/9');
+			$this->validaRespostas();
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -820,11 +777,10 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			$this->session->set_userdata('pontuacao', '2');
-			redirect('pontuacao');
+			$this->adicionaPontuacao('2');
+			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
-			$this->session->set_flashdata('error', 'error');
-			redirect('perguntas/9');
+			$this->validaRespostas();
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -847,10 +803,10 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			$this->session->set_userdata('pontuacao', '2');
-			redirect('pontuacao');
+			$this->adicionaPontuacao('2');
+			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
-			redirect('perguntas/34');
+			$this->adicionaResposta('34');
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -873,11 +829,10 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			$this->session->set_userdata('pontuacao', '2');
-			redirect('pontuacao');
+			$this->adicionaPontuacao('2');
+			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
-			$this->session->set_flashdata('error', 'error');
-			redirect('perguntas/9');
+			$this->validaRespostas();
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -900,11 +855,9 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			// redirect('perguntas/36');
 			$this->adicionaResposta('36');
 		} elseif ($primeira == 'Não') {
-			$this->session->set_flashdata('error', 'error');
-			redirect('perguntas/9');
+			$this->validaRespostas();
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -927,15 +880,11 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			// $this->session->set_userdata('pontuacao', '2');
-			// redirect('pontuacao');
 			$this->adicionaPontuacao('2');
 			$this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->adicionaPontuacao('3');
 			$this->validaRespostas();
-			// $this->session->set_userdata('pontuacao', '3');
-			// redirect('pontuacao');
 		} else {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
@@ -982,13 +931,9 @@ class Perguntas extends CI_Controller {
 		$primeira = $this->input->post('primeira');
 
 		if ($primeira == 'Sim') {
-			// $this->session->set_userdata('pontuacao', '2');
-			// redirect('pontuacao');
 			$this->adicionaPontuacao('2');
 			$this->validaRespostas();
 		} else {
-			// $this->session->set_userdata('pontuacao', '1');
-			// redirect('pontuacao');
 			$this->adicionaPontuacao('3');
 			$this->validaRespostas();
 		}
@@ -1053,38 +998,20 @@ class Perguntas extends CI_Controller {
 
 		$respostas = $this->session->userdata('respostas_historia_usuario');
 
-		var_dump($respostas);
-
-		echo "<br><br>";
-		$removedItem = array_shift($respostas);
-
-		$this->session->set_userdata('respostas_historia_usuario', $respostas);
-
-		var_dump(count($respostas));
-
 		if (count($respostas) == 0) {
 			redirect('pontuacao');
 		}
-
+		$removedItem = array_shift($respostas);
+		$this->session->set_userdata('respostas_historia_usuario', $respostas);
 		redirect('perguntas/'.$removedItem);
-
 
 	}
 
 	public function adicionaResposta($resposta) {
 
         $respostas = $this->session->userdata('respostas_historia_usuario');
-
-		var_dump($respostas);
-		
-		echo "<br><br>";
         array_unshift($respostas, $resposta);
-
-		var_dump($respostas);
-
         $this->session->set_userdata('respostas_historia_usuario', $respostas);
-
-
 
 		$this->validaRespostas();
     }
