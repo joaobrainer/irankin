@@ -36,6 +36,17 @@
 							<div class="row">
 								<div class="col-md-3" style='cursor: pointer;'>
 									<label>
+										<input type="checkbox" name="sintomas[]" id="Nenhum" value="Nenhum" onclick="validaOpcao(this);">
+										<img src="<?php print_r(base_url('assets/images/5.png')); ?>" class="iconeperguntas">
+										<?php if ($this->session->userdata('lang') == 'pt-br') { ?>
+											<h3 class="texticonesselecionaveis">Não há qualquer queixa ou sintoma</h3>
+										<?php } elseif ($this->session->userdata('lang') == 'en-us') { ?>
+											<h3 class="texticonesselecionaveis">No symptoms or claims</h3>
+										<?php } ?>
+									</label>
+								</div>
+								<div class="col-md-3" style='cursor: pointer;'>
+									<label>
 										<input type="checkbox" name="sintomas[]" id="Motores" value="Motores" onclick="validaOpcao(this);">
 										<img src="<?php print_r(base_url('assets/images/sintomas/fraco.png')); ?>" class="iconeperguntas">
 										<?php if ($this->session->userdata('lang') == 'pt-br') { ?>
@@ -66,7 +77,10 @@
 											<h3 class="texticonesselecionaveis">Reading</h3>
 										<?php } ?>
 									</label>
-								</div>
+								</div>								
+							</div>
+
+							<div class="row">
 								<div class="col-md-3" style='cursor: pointer;'>
 									<label>
 										<input type="checkbox" name="sintomas[]" id="Desequilibrio" value="Desequilíbrio" onclick="validaOpcao(this);">
@@ -78,9 +92,6 @@
 										<?php } ?>
 									</label>
 								</div>
-							</div>
-
-							<div class="row">
 								<div class="col-md-3" style='cursor: pointer;'>
 									<label>
 										<input type="checkbox" name="sintomas[]" id="Parestesia" value="Parestesia" onclick="validaOpcao(this);">
@@ -113,7 +124,10 @@
 											<h3 class="texticonesselecionaveis">Sensitivity</h3>
 										<?php } ?>
 									</label>
-								</div>
+								</div>								
+							</div>
+
+							<div class="row">
 								<div class="col-md-3" style='cursor: pointer;'>
 									<label>
 										<input type="checkbox" name="sintomas[]" id="Cognitivos" value="Cognitivos" onclick="validaOpcao(this);">
@@ -125,9 +139,6 @@
 										<?php } ?>
 									</label>
 								</div>
-							</div>
-
-							<div class="row">
 								<div class="col-md-3" style='cursor: pointer;'>
 									<label>
 										<input type="checkbox" name="sintomas[]" id="Visuais" value="Visuais" onclick="validaOpcao(this);">
@@ -160,7 +171,10 @@
 											<h3 class="texticonesselecionaveis">Mood</h3>
 										<?php } ?>
 									</label>
-								</div>
+								</div>								
+							</div>
+
+							<div class="row">
 								<div class="col-md-3" style='cursor: pointer;'>
 									<label>
 										<input type="checkbox" name="sintomas[]" id="Dor" value="Dor" onclick="validaOpcao(this);">
@@ -172,9 +186,6 @@
 										<?php } ?>
 									</label>
 								</div>
-							</div>
-
-							<div class="row">
 								<div class="col-md-3" style='cursor: pointer;'>
 									<label>
 										<input type="checkbox" name="sintomas[]" id="Higiene" value="Higiene" onclick="validaOpcao(this);">
@@ -207,7 +218,10 @@
 											<h3 class="texticonesselecionaveis">Related to eating</h3>
 										<?php } ?>
 									</label>
-								</div>
+								</div>								
+							</div>
+
+							<div class="row">
 								<div class="col-md-3" style='cursor: pointer;'>
 									<label>
 										<input type="checkbox" name="sintomas[]" id="Incontinencia" value="Incontinencia" onclick="validaOpcao(this);">
@@ -218,11 +232,7 @@
 											<h3 class="texticonesselecionaveis">Incontinence</h3>
 										<?php } ?>
 									</label>
-								</div>
-							</div>
-
-							<div class="row">
-								
+								</div>								
 								<div class="col-md-3" style='cursor: pointer;'>
 									<label>
 										<input type="checkbox" name="sintomas[]" id="Fadiga" value="Fadiga" onclick="validaOpcao(this);">
@@ -233,18 +243,7 @@
 											<h3 class="texticonesselecionaveis">Fatigue</h3>
 										<?php } ?>
 									</label>
-								</div>
-								<div class="col-md-3" style='cursor: pointer;'>
-									<label>
-										<input type="checkbox" name="sintomas[]" id="Nenhum" value="Nenhum" onclick="validaOpcao(this);">
-										<img src="<?php print_r(base_url('assets/images/5.png')); ?>" class="iconeperguntas">
-										<?php if ($this->session->userdata('lang') == 'pt-br') { ?>
-											<h3 class="texticonesselecionaveis">Não há qualquer queixa ou sintoma</h3>
-										<?php } elseif ($this->session->userdata('lang') == 'en-us') { ?>
-											<h3 class="texticonesselecionaveis">No symptoms or claims</h3>
-										<?php } ?>
-									</label>
-								</div>
+								</div>								
 							</div>
 
 

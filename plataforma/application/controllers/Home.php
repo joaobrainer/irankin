@@ -10,6 +10,8 @@ class Home extends CI_Controller {
 		$this->session->set_userdata('lang', 'pt-br');
 
 		$this->session->set_userdata('pergunta', '');
+		$this->session->set_userdata('respostas_historia_usuario', array());
+		$this->session->set_userdata('pontuacao', '0');
 
 		$this->load->view('home', $dados);
 		
