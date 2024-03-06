@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<?php $this->load->view('header'); ?>
 </head>
+
 <body>
 
 	<div id="perguntas">
@@ -42,10 +44,10 @@
 				</div>
 				<div class="row" style="text-align: center;">
 					<div class="col-md-12">
-						<p>Application developed by <a href="https://www.linkedin.com/in/joao-brainer-andrade-a212b7228" target="_blank">João Brainer Clares de Andrade</a>, <a href="https://www.linkedin.com/in/danielsciarotta/" target="_blank">Daniel Sciarotta Zaveri</a>, <a href="#" target="_blank">Julia Malheiros</a>, <a href="#">Gabriel Queiroz</a>, <a href="https://www.linkedin.com/in/leonardocarbonera" target="_blank">Leonardo Augusto Carbonera</a> and <a href="#" target="_blank">Gisele Sampaio Silva</a></p>
+						<p>Application developed by <a href="https://www.linkedin.com/in/joao-brainer-andrade-a212b7228" target="_blank">João Brainer Clares de Andrade</a>, <a href="https://www.linkedin.com/in/danielsciarotta/" target="_blank">Daniel Sciarotta Zaveri</a>, <a href="#" target="_blank">Julia Malheiros</a>, <a href="#">Gabriel Queiroz</a>, <a href="https://www.linkedin.com/in/leonardocarbonera" target="_blank">Leonardo Augusto Carbonera</a>, <a href="#" target="_blank">Gisele Sampaio Silva</a>, <a href="#" target="_blank">Rafael Pádua Gomes</a>, <a href="#" target="_blank">Carlos Eduardo Lenis Rodriguez</a> and <a href="#" target="_blank">Alexandre Cristiuma Robles</a></p>
 					</div>
 				</div>
-				
+
 				<div class="row">
 					<div class="col-md-12">
 						<img src="<?php print_r(base_url('assets/images/sobre2.png')); ?>" class="iconesobre">
@@ -78,14 +80,14 @@
 						<p>Prof Askiel Bruno, MD</p>
 					</div>
 				</div>
-				
+
 				<div class="row">
 					<div class="col-md-12">
 						<img src="<?php print_r(base_url('assets/images/sobre4.png')); ?>" class="iconesobre">
 						<h3>Publications</h3>
 					</div>
 				</div>
-				
+
 
 			</div>
 
@@ -98,4 +100,5 @@
 	<?php $this->load->view('footer'); ?>
 
 </footer>
+
 </html>
