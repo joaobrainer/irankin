@@ -87,12 +87,14 @@
 						<h3>Publications</h3>
 					</div>
 				</div>
-
+				<div class="row pd-4" style="text-align: center;">
+					<div class="col-md-12">
+						<a href="https://journals.sagepub.com/doi/10.1177/17474930241246157" target="_blank">https://journals.sagepub.com/doi/10.1177/17474930241246157</a>
+					</div>
+				</div>
 
 			</div>
-
 		</div>
-	</div>
 
 </body>
 <footer>
