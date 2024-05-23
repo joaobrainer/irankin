@@ -14,10 +14,20 @@
 					<div class="row">
 						<div class="col-md-12">
 							<img src="<?php print_r(base_url('assets/images/85.png')); ?>" class="iconeperguntas">
-							<?php if ($this->session->userdata('lang') == 'pt-br') { ?>
-								<h1>A assistência é indispensável para as <a href="#" class="tooltipwords" data-toggle="tooltip" title="Por exemplo, encontrar e guardar roupas e limpar depois de uma refeição. Exclua tarefas que não precisam ser feitas todos os dias, como usar um aspirador de pó ou levantar móveis">tarefas básicas</a>, mesmo que o paciente não as faça rotineiramente?</h1>
-							<?php } elseif ($this->session->userdata('lang') == 'en-us') { ?>
-								<h1>Is assistance essential for <a href="#" class="tooltipwords" data-toggle="tooltip" title="For example, finding and putting away clothes and clearing up after a meal. Exclude chores that need not be done daily, such as using a vacuum cleaner.">basic chores</a>, even if the patient does not normally do them?</h1>
+							<?php switch ($this->session->userdata('lang')) {		
+
+								case 'pt-br': ?>
+									<h1>A assistência é indispensável para as <a href="#" class="tooltipwords" data-toggle="tooltip" title="Por exemplo, encontrar e guardar roupas e limpar depois de uma refeição. Exclua tarefas que não precisam ser feitas todos os dias, como usar um aspirador de pó ou levantar móveis.">tarefas básicas</a>, mesmo que o paciente não as faça rotineiramente?</h1>				
+								<?php break; ?>
+
+								<?php case 'en-us': ?>
+									<h1>Is assistance essential for <a href="#" class="tooltipwords" data-toggle="tooltip" title="For example, finding and putting away clothes and clearing up after a meal. Exclude chores that need not be done daily, such as using a vacuum cleaner.">basic chores</a>, even if the patient does not normally do them?</h1>		
+								<?php break; ?>
+
+								<?php case 'es-es': ?>
+									<h1>¿Es esencial la asistencia para las <a href="#" class="tooltipwords" data-toggle="tooltip" title="Por ejemplo, buscar y guardar la ropa o limpiar después de una comida. Excluya tareas que no es necesario realizar todos los días, como usar una aspiradora o mover muebles.">tareas básicas</a>, incluso si el paciente no las realiza de forma rutinaria?</h1>		
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">
