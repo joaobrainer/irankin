@@ -14,10 +14,20 @@
 					<div class="row">
 						<div class="col-md-12">
 							<img src="<?php print_r(base_url('assets/images/811.png')); ?>" class="iconeperguntas">
-							<?php if ($this->session->userdata('lang') == 'pt-br') { ?>
-								<h1>O paciente é independente, mas tem problemas de relacionamento OU fica isolado uma vez por semana ou mais (ou diariamente)?</h1>
-							<?php } elseif ($this->session->userdata('lang') == 'en-us') { ?>
-								<h1>The patient is independent, but has problems with relationships OR becomes isolated once a week or more (or daily)</h1>
+							<?php switch ($this->session->userdata('lang')) {		
+
+								case 'pt-br': ?>
+									<h1>O paciente é independente, mas tem problemas de relacionamento OU fica isolado uma vez por semana ou mais (ou diariamente)?</h1>		
+								<?php break; ?>
+
+								<?php case 'en-us': ?>
+									<h1>The patient is independent, but has problems with relationships OR becomes isolated once a week or more (or daily)</h1>	
+								<?php break; ?>
+
+								<?php case 'es-es': ?>
+									<h1>¿El paciente es independiente pero tiene problemas de relación O se aísla una vez por semana o más (o diariamente)?</h1>		
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

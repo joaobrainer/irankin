@@ -14,10 +14,20 @@
 					<div class="row">
 						<div class="col-md-12">
 							<img src="<?php print_r(base_url('assets/images/17.png')); ?>" class="iconeperguntas">
-							<?php if ($this->session->userdata('lang') == 'pt-br') { ?>
-								<h1>O paciente é capaz de caminhar e se deslocar <a href="#" class="tooltipwords" data-toggle="tooltip" title="Mesmo usando uma bengala, muleta ou andador, o paciente é capaz de realizar transferências sem ajuda de outra pessoa">independentemente</a>, mas usando bengala ou andador? <br> Responda NÃO se o paciente não precisa de nenhum tipo dessa ajuda (bengala, muleta, andador...)</h1>
-							<?php } elseif ($this->session->userdata('lang') == 'en-us') { ?>
-								<h1>The patient is able to walk/move <a href="#" class="tooltipwords" data-toggle="tooltip" title="Even patients using stick, cane or walker patient should be able to transfer independently and use the aid without the assistance of another person">independetly</a>, but using stick/cane or walking frame/walker? <br> Mark NO if the patient does not need any aid (stick/cane/walker)</h1>
+							<?php switch ($this->session->userdata('lang')) {		
+
+								case 'pt-br': ?>
+									<h1>O paciente é capaz de caminhar e se deslocar <a href="#" class="tooltipwords" data-toggle="tooltip" title="Mesmo usando uma bengala, muleta ou andador, o paciente é capaz de realizar transferências sem ajuda de outra pessoa">independentemente</a>, mas usando bengala ou andador? <br> Responda NÃO se o paciente não precisa de nenhum tipo dessa ajuda (bengala, muleta, andador...)</h1>	
+								<?php break; ?>
+
+								<?php case 'en-us': ?>
+									<h1>The patient is able to walk/move <a href="#" class="tooltipwords" data-toggle="tooltip" title="Even patients using stick, cane or walker patient should be able to transfer independently and use the aid without the assistance of another person">independetly</a>, but using stick/cane or walking frame/walker? <br> Mark NO if the patient does not need any aid (stick/cane/walker)</h1>	
+								<?php break; ?>
+
+								<?php case 'es-es': ?>
+									<h1>¿El paciente puede caminar y moverse de forma <a href="#" class="tooltipwords" data-toggle="tooltip" title="Incluso utilizando bastón, muleta o andador, el paciente es capaz de realizar transferencias sin ayuda de otra persona.">independiente</a>, pero utilizando bastón o andador? Responda NO si el paciente no necesita ningún tipo de ayuda (bastón, muleta, andador…)</h1>			
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

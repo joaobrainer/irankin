@@ -14,10 +14,20 @@
 					<div class="row">
 						<div class="col-md-12">
 							<img src="<?php print_r(base_url('assets/images/87.png')); ?>" class="iconeperguntas">
-							<?php if ($this->session->userdata('lang') == 'pt-br') { ?>
-								<h1>Portanto o paciente é apto para fazer viagens locais, chamar um táxi (instruindo o motorista) ou pegar o transporte público, mas com alguma/pouca dificuldade?</h1>
-							<?php } elseif ($this->session->userdata('lang') == 'en-us') { ?>
-								<h1>Thus the patient is able to local traveling, calling a taxi (instructing the driver) or taking a public transport, but with some/mild difficulty?</h1>
+							<?php switch ($this->session->userdata('lang')) {		
+
+								case 'pt-br': ?>
+									<h1>Portanto o paciente é apto para fazer viagens locais, chamar um táxi (instruindo o motorista) ou pegar o transporte público, mas com alguma/pouca dificuldade?</h1>			
+								<?php break; ?>
+
+								<?php case 'en-us': ?>
+									<h1>Thus the patient is able to local traveling, calling a taxi (instructing the driver) or taking a public transport, but with some/mild difficulty?</h1>		
+								<?php break; ?>
+
+								<?php case 'es-es': ?>
+									<h1>Por lo tanto, ¿el paciente puede realizar desplazamientos locales, llamar a un taxi (instruyendo al conductor) o utilizar el transporte público, pero con alguna/poca dificultad?</h1>		
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

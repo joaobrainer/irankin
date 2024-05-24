@@ -14,10 +14,20 @@
 					<div class="row">
 						<div class="col-md-12">
 							<img src="<?php print_r(base_url('assets/images/36.png')); ?>" class="iconeperguntas">
-							<?php if ($this->session->userdata('lang') == 'pt-br') { ?>
-								<h1>O paciente é capaz de realizar todas as atividades pré-AVC, mas com mudanças OU problemas com os estudos OU não consegue retornar aos estudos com o mesmo desempenho de antes? <br>Responda NÃO, se o paciente agora não puder realizar essas atividades e precisa de ajuda em outra atividade de rotina diária</h1>
-							<?php } elseif ($this->session->userdata('lang') == 'en-us') { ?>
-								<h1>The patient is able to carry out all pre-stroke activities , but with changes in education OR problems with study OR unable to return to study with the last performance? <br>Answer NO if the patient is now unable to perform these activities and needs help with another daily routine activity</h1>
+							<?php switch ($this->session->userdata('lang')) {		
+
+								case 'pt-br': ?>
+									<h1>O paciente é capaz de realizar todas as atividades pré-AVC, mas com mudanças OU problemas com os estudos OU não consegue retornar aos estudos com o mesmo desempenho de antes? <br>Responda NÃO, se o paciente agora não puder realizar essas atividades e precisa de ajuda em outra atividade de rotina diária</h1>		
+								<?php break; ?>
+
+								<?php case 'en-us': ?>
+									<h1>The patient is able to carry out all pre-stroke activities , but with changes in education OR problems with study OR unable to return to study with the last performance? <br>Answer NO if the patient is now unable to perform these activities and needs help with another daily routine activity</h1>
+								<?php break; ?>
+
+								<?php case 'es-es': ?>
+									<h1>¿El paciente es capaz de realizar todas las actividades previas al ictus, pero con cambios O problemas con los estudios O no puede volver a los estudios con el mismo rendimiento que antes? <br>Responda NO si el paciente ahora no puede realizar estas actividades y necesita ayuda con otra actividad de rutina diaria.</h1>		
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

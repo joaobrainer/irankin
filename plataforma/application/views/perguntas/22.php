@@ -14,10 +14,20 @@
 					<div class="row">
 						<div class="col-md-12">
 							<img src="<?php print_r(base_url('assets/images/86.png')); ?>" class="iconeperguntas">
-							<?php if ($this->session->userdata('lang') == 'pt-br') { ?>
-								<h1>O paciente é <a href="#" class="tooltipwords" data-toggle="tooltip" title="Procure por uma mudança com relação ao nível de responsabilidade anterior. A questão não é financeira. Refere-se a se os pacientes são ou não capazes de assumir a responsabilidade pelo dinheiro que tem">capaz</a> de gerenciar seu/sua própria pensão/renda e pagar as contas, mas com alguma/pouca dificuldade?</h1>
-							<?php } elseif ($this->session->userdata('lang') == 'en-us') { ?>
-								<h1>The patient is <a href="#" class="tooltipwords" data-toggle="tooltip" title="Look for a change from the previous level of responsibility. The question is not about finances. It refers to whether or not patients can take responsibility for the money that they have.">able</a> to do manage his/her own pension/income and arrange to pay bills, but with some/mild difficulty?</h1>
+							<?php switch ($this->session->userdata('lang')) {		
+
+								case 'pt-br': ?>
+									<h1>O paciente é <a href="#" class="tooltipwords" data-toggle="tooltip" title="Procure por uma mudança com relação ao nível de responsabilidade anterior. A questão não é financeira. Refere-se a se os pacientes são ou não capazes de assumir a responsabilidade pelo dinheiro que tem">capaz</a> de gerenciar seu/sua própria pensão/renda e pagar as contas, mas com alguma/pouca dificuldade?</h1>		
+								<?php break; ?>
+
+								<?php case 'en-us': ?>
+									<h1>The patient is <a href="#" class="tooltipwords" data-toggle="tooltip" title="Look for a change from the previous level of responsibility. The question is not about finances. It refers to whether or not patients can take responsibility for the money that they have.">able</a> to do manage his/her own pension/income and arrange to pay bills, but with some/mild difficulty?</h1>	
+								<?php break; ?>
+
+								<?php case 'es-es': ?>
+									<h1>¿<a href="#" class="tooltipwords" data-toggle="tooltip" title="Busque por un cambio con relación al nivel de responsabilidad anterior. La cuestión no es financiera. Se refiere a si los pacientes son capaces o no de responsabilizarse del dinero que tienen.">Puede</a> el paciente administrar su propia pensión/ingresos y pagar facturas, pero con alguna o poca dificultad?</h1>		
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

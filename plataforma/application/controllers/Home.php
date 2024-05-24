@@ -7,7 +7,11 @@ class Home extends CI_Controller {
 
 		$dados['titulo'] = "iRankin | Início";
 
-		$this->session->set_userdata('lang', 'pt-br');
+		$this->session->set_userdata('lang', 'en-us');
+
+		if (isset($_GET['lang'])) {
+			$this->session->set_userdata('lang', $_GET['lang']);
+		}
 
 		$this->session->set_userdata('pergunta', '');
 		$this->session->set_userdata('respostas_historia_usuario', array());

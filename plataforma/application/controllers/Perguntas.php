@@ -15,6 +15,9 @@ class Perguntas extends CI_Controller {
 				case 'en-us':
 					$this->session->set_userdata('lang', 'en-us');
 					break;
+				case 'es-es':
+					$this->session->set_userdata('lang', 'es-es');
+					break;
 				default:
 					$this->session->set_userdata('lang', 'en-us');
 					break;

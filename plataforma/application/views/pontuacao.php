@@ -11,11 +11,21 @@
 			<div id="pontuacao" class="fadein-animacao">
 				<div class="row">
 					<div class="col-md-12">
-						<?php if ($this->session->userdata('lang') == 'pt-br') { ?>
-							<h1>Pontuação</h1>
-						<?php } elseif ($this->session->userdata('lang') == 'en-us') { ?>
-							<h1>Grading Score</h1>
-						<?php } ?>
+					<?php switch ($this->session->userdata('lang')) {		
+
+						case 'pt-br': ?>
+							<h3 class="texticonesselecionaveis">Pontuação</h3>
+						<?php break; ?>
+
+						<?php case 'en-us': ?>
+							<h3 class="texticonesselecionaveis">Grading Score</h3>
+						<?php break; ?>
+
+						<?php case 'es-es': ?>
+							<h3 class="texticonesselecionaveis">Puntaje</h3>
+						<?php break; ?>
+
+					<?php } ?>
 						<h2><?php print_r($this->session->userdata('pontuacao')); ?></h2>
 					</div>
 				</div>
@@ -73,6 +83,30 @@
 											$message = '';
 											break;
 									}
+								} elseif ($this->session->userdata('lang') == 'es-es') {
+									switch ($this->session->userdata('pontuacao')) {
+										case '0':
+											$message = 'Níngun síntoma. El paciente no es consciente de nuevas limitaciones o síntomas causados ​​por el ACV, ni siquiera síntomas leves.';
+											break;
+										case '1':
+											$message = 'Ninguna discapacidad significativa a pesar de los síntomas; capaz de realizar todas las tareas y actividades habituales';
+											break;
+										case '2':
+											$message = 'Discapacidad leve; incapaz de realizar todas las actividades anteriores, pero puede valerse por sí mismo, sin necesidad de ayuda.';
+											break;
+										case '3':
+											$message = 'Discapacidad moderada; Requiere algo de ayuda pero puede caminar solo.';
+											break;
+										case '4':
+											$message = 'Discapacidad moderadamente grave: incapaz de caminar solo e incapaz de satisfacer sus propias necesidades corporales sin ayuda.';
+											break;
+										case '5':
+											$message = 'Discapacidad grave: Necesita cuidados (profesionales o no) durante las 24 horas del día. Es totalmente dependiente, requiriendo de asistencia continuada.';
+											break;
+										default:
+											$message = '';
+											break;
+									}
 								}
 
 								print_r($message);
@@ -81,14 +115,22 @@
 					</div>
 				</div>
 
-
-
 				<div class="row">
 					<div class="col-md-12">
-						<?php if ($this->session->userdata('lang') == 'pt-br') { ?>
-							<a href="<?php print_r(base_url('')) ?>" class="btn btnpt">Refazer</a>
-						<?php } elseif ($this->session->userdata('lang') == 'en-us') { ?>
-							<a href="<?php print_r(base_url('')) ?>" class="btn btneng">Reload</a>
+						<?php switch ($this->session->userdata('lang')) {		
+
+							case 'pt-br': ?>
+								<a href="<?php print_r(base_url('')) ?>" class="btn btnpt">Refazer</a>
+							<?php break; ?>
+
+							<?php case 'en-us': ?>
+								<a href="<?php print_r(base_url('')) ?>" class="btn btneng">Reload</a>
+							<?php break; ?>						
+
+							<?php case 'es-es': ?>
+								<a href="<?php print_r(base_url('')) ?>" class="btn btneng">Rehacer</a>
+							<?php break; ?>
+
 						<?php } ?>
 					</div>
 				</div>

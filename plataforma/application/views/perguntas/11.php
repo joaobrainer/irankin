@@ -14,10 +14,20 @@
 					<div class="row">
 						<div class="col-md-12">
 							<img src="<?php print_r(base_url('assets/images/81.png')); ?>" class="iconeperguntas">
-							<?php if ($this->session->userdata('lang') == 'pt-br') { ?>
-								<h1>O paciente necessita de <a href="#" class="tooltipwords" data-toggle="tooltip" title="O paciente consegue comer alimentos preparados por ele mesmo. Este não é um tipo de assistência. Comida e suplementos podem ser fornecidos por outros">assistência essencial</a> para comer?</h1>
-							<?php } elseif ($this->session->userdata('lang') == 'en-us') { ?>
-								<h1>The patient needs essential <a href="#" class="tooltipwords" data-toggle="tooltip" title="Patients may eat a modified diet on their own. This is not a kind of assistance. Others may provide food and implements.">assistance for eating</a></h1>
+							<?php switch ($this->session->userdata('lang')) {		
+
+								case 'pt-br': ?>
+									<h1>O paciente necessita de <a href="#" class="tooltipwords" data-toggle="tooltip" title="O paciente consegue comer alimentos preparados por ele mesmo. Este não é um tipo de assistência. Comida e suplementos podem ser fornecidos por outros">assistência essencial</a> para comer?</h1>			
+								<?php break; ?>
+
+								<?php case 'en-us': ?>
+									<h1>The patient needs essential <a href="#" class="tooltipwords" data-toggle="tooltip" title="Patients may eat a modified diet on their own. This is not a kind of assistance. Others may provide food and implements.">assistance for eating</a></h1>		
+								<?php break; ?>
+
+								<?php case 'es-es': ?>
+									<h1>¿El paciente requiere <a href="#" class="tooltipwords" data-toggle="tooltip" title="El paciente puede ingerir alimentos preparados por él mismo. Este no es un tipo de asistencia. Otros pueden proporcionar alimentos y suplementos.">asistencia esencial</a> para comer?</h1>			
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

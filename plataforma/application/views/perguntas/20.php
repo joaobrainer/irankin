@@ -14,10 +14,20 @@
 					<div class="row">
 						<div class="col-md-12">
 							<img src="<?php print_r(base_url('assets/images/85.png')); ?>" class="iconeperguntas">
-							<?php if ($this->session->userdata('lang') == 'pt-br') { ?>
-								<h1>Portanto, o paciente é <a href="#" class="tooltipwords" data-toggle="tooltip" title="Tente esclarecer sondando sobre a capacidade da pessoa em realizar as tarefas">capaz</a> de <a href="#" class="tooltipwords" data-toggle="tooltip" title="Por exemplo, encontrar e guardar roupas, se limpar depois de uma refeição. Exclua tarefas que não precisam ser realizadas todos os dias, como utilizar o aspirador de pó">realizar tarefas básicas</a>, se necessário, mesmo que ele/ela não as faça normalmente, mas com alguma dificuldade</h1>
-							<?php } elseif ($this->session->userdata('lang') == 'en-us') { ?>
-								<h1>Therefore, the patient is <a href="#" class="tooltipwords" data-toggle="tooltip" title="Try to clarify by probing about the person’s ability to perform the chores.">able</a> to do <a href="#" class="tooltipwords" data-toggle="tooltip" title="For example, finding and putting away clothes, clearing up after a meal. Exclude chores that do not need to be done every day, such as using a vacuum cleaner">basic chores</a>, if necessary, even if he/she does not normally do them, but with some/mild difficulty</h1>
+							<?php switch ($this->session->userdata('lang')) {		
+
+								case 'pt-br': ?>
+									<h1>Portanto, o paciente é <a href="#" class="tooltipwords" data-toggle="tooltip" title="Tente esclarecer sondando sobre a capacidade da pessoa em realizar as tarefas">capaz</a> de <a href="#" class="tooltipwords" data-toggle="tooltip" title="Por exemplo, encontrar e guardar roupas, se limpar depois de uma refeição. Exclua tarefas que não precisam ser realizadas todos os dias, como utilizar o aspirador de pó">realizar tarefas básicas</a>, se necessário, mesmo que ele/ela não as faça normalmente, mas com alguma dificuldade</h1>		
+								<?php break; ?>
+
+								<?php case 'en-us': ?>
+									<h1>Therefore, the patient is <a href="#" class="tooltipwords" data-toggle="tooltip" title="Try to clarify by probing about the person’s ability to perform the chores.">able</a> to do <a href="#" class="tooltipwords" data-toggle="tooltip" title="For example, finding and putting away clothes, clearing up after a meal. Exclude chores that do not need to be done every day, such as using a vacuum cleaner">basic chores</a>, if necessary, even if he/she does not normally do them, but with some/mild difficulty</h1>		
+								<?php break; ?>
+
+								<?php case 'es-es': ?>
+									<h1>Por lo tanto, el paciente es <a href="#" class="tooltipwords" data-toggle="tooltip" title="Trate de aclarar, investigando, la capacidad de la persona para realizar las tareas.">capaz</a> de <a href="#" class="tooltipwords" data-toggle="tooltip" title="Por ejemplo, buscar y guardar la ropa, limpiar después de una comida. Excluye tareas que no es necesario hacer todos los días, como usar la aspiradora.">realizar tareas básicas</a> si es necesario, aunque no las haga con normalidad sino con cierta dificultad.</h1>		
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">
