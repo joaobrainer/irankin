@@ -14,10 +14,20 @@
 					<div class="row">
 						<div class="col-md-12">
 							<img src="<?php print_r(base_url('assets/images/89.png')); ?>" class="iconeperguntas">
-							<?php if ($this->session->userdata('lang') == 'pt-br') { ?>
-								<h1>O paciente estava acostumado a <a href="#" class="tooltipwords" data-toggle="tooltip" title="Como uma babá, cuidando de seu parceiro, seus pais, seu netos ou outros dependentes">cuidar de outros</a> em casa?</h1>
-							<?php } elseif ($this->session->userdata('lang') == 'en-us') { ?>
-								<h1>The patient was used to <a href="#" class="tooltipwords" data-toggle="tooltip" title="Such as babysitting, looking after your partner, parents, grandchildren, or dependent others.">looking after others</a> at home?</h1>
+							<?php switch ($this->session->userdata('lang')) {		
+
+								case 'pt-br': ?>
+									<h1>O paciente estava acostumado a <a href="#" class="tooltipwords" data-toggle="tooltip" title="Como uma babá, cuidando de seu parceiro, seus pais, seu netos ou outros dependentes">cuidar de outros</a> em casa?</h1>		
+								<?php break; ?>
+
+								<?php case 'en-us': ?>
+									<h1>The patient was used to <a href="#" class="tooltipwords" data-toggle="tooltip" title="Such as babysitting, looking after your partner, parents, grandchildren, or dependent others.">looking after others</a> at home?</h1>	
+								<?php break; ?>
+
+								<?php case 'es-es': ?>
+									<h1>¿Estaba el paciente acostumbrado a <a href="#" class="tooltipwords" data-toggle="tooltip" title="Como niñera o cuidando de la pareja, de los padres, los nietos u otras personas dependientes.">cuidar a otras</a> personas en la casa?</h1>	
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

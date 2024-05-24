@@ -13,12 +13,22 @@
 				<div id="primeira" class="fadein-animacao">
 					<div class="row">
 						<div class="col-md-12">
-							<img src="<?php print_r(base_url('assets/images/813.png')); ?>" class="iconeperguntas">
-							<?php if ($this->session->userdata('lang') == 'pt-br') { ?>
-								<h1>O paciente estava atuando como estudante antes do AVC?</h1>
-							<?php } elseif ($this->session->userdata('lang') == 'en-us') { ?>
-								<h1>The patient was studying as a student before stroke?</h1>
-							<?php } ?>
+							<img src="<?php print_r(base_url('assets/images/813.png')); ?>" class="iconeperguntas">							
+								<?php switch ($this->session->userdata('lang')) {		
+
+									case 'pt-br': ?>
+										<h1>O paciente estava atuando como estudante antes do AVC?</h1>			
+									<?php break; ?>
+
+									<?php case 'en-us': ?>
+										<h1>The patient was studying as a student before stroke?</h1>	
+									<?php break; ?>
+
+									<?php case 'es-es': ?>
+										<h1>¿Actuaba el paciente como estudiante antes del ictus?</h1>		
+									<?php break; ?>
+
+								<?php } ?>						
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">
 								<img src="<?php print_r(base_url('assets/images/yes.png')); ?>">

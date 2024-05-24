@@ -35,12 +35,15 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12 btnentrar">
-					<a href="<?= base_url('?lang=pt-br') ?>"><img class="img-languages" src="<?= base_url('assets/images/languages/brasil.png')?>" alt="PT-BR"></a>
-
-					<a href="<?= base_url('?lang=es-es') ?>"><img class="img-languages" src="<?= base_url('assets/images/languages/espanha.png')?>" alt="ES-ES"></a>
-
-					<a href="<?= base_url('?lang=en-us') ?>"><img class="img-languages" src="<?= base_url('assets/images/languages/estados-unidos.png')?>" alt="EN-US"></a>
-
+					<?php if ($language != 'pt-br') { ?>
+						<a href="<?= base_url('?lang=pt-br') ?>"><img class="img-languages" src="<?= base_url('assets/images/languages/brasil.png')?>" alt="PT-BR"></a>
+					<?php } ?>
+					<?php if ($language != 'es-es') { ?>
+						<a href="<?= base_url('?lang=es-es') ?>"><img class="img-languages" src="<?= base_url('assets/images/languages/espanha.png')?>" alt="ES-ES"></a>
+					<?php } ?>
+					<?php if ($language != 'en-us') { ?>
+						<a href="<?= base_url('?lang=en-us') ?>"><img class="img-languages" src="<?= base_url('assets/images/languages/estados-unidos.png')?>" alt="EN-US"></a>
+					<?php } ?>
 					<!-- <a href="<?= base_url('?lang=ch-ch') ?>"><img class="img-languages" src="<?= base_url('assets/images/languages/china.png')?>" alt="CH"></a> -->
 				</div>
 			</div>

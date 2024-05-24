@@ -461,11 +461,22 @@
 								<div class="col-md-2">
 									<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">
 									<img src="<?php print_r(base_url('assets/images/8.png')); ?>" class="iconeperguntas" style="height: 200px;">
-									<?php if ($this->session->userdata('lang') == 'pt-br') { ?>
-										<h3 class="texticonesselecionaveis" style="margin-bottom: 3rem; opacity: 1;">Seguinte</h3>
-									<?php } elseif ($this->session->userdata('lang') == 'en-us') { ?>
-										<h3 class="texticonesselecionaveis" style="margin-bottom: 3rem; opacity: 1;">Next</h3>
+									<?php switch ($this->session->userdata('lang')) {		
+
+										case 'pt-br': ?>
+											<h3 class="texticonesselecionaveis" style="margin-bottom: 3rem; opacity: 1;">Seguinte</h3>	
+										<?php break; ?>
+
+										<?php case 'en-us': ?>
+											<h3 class="texticonesselecionaveis" style="margin-bottom: 3rem; opacity: 1;">Next</h3>	
+										<?php break; ?>
+
+										<?php case 'es-es': ?>
+											<h3 class="texticonesselecionaveis" style="margin-bottom: 3rem; opacity: 1;">Próximo</h3>			
+										<?php break; ?>
+
 									<?php } ?>
+
 								</div>
 							</div>
 

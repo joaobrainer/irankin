@@ -26,7 +26,7 @@
 								<?php break; ?>
 
 								<?php case 'es-es': ?>
-									<h1>¿Es el paciente completamente <a href="#" class="tooltipwords" data-toggle="tooltip" title="No conducir por motivos legales en un paciente sano no se considera una discapacidad">independiente</a> y capaz de realizar todas las actividades previas al ictus tan bien como antes?</h1>
+									<h1>¿Es el paciente completamente <a href="#" class="tooltipwords" data-toggle="tooltip" title="Un paciente físicamente capacitado, pero que no puede conducir, por motivos legales , no se considera discapacidad">independiente</a> y capaz de realizar todas las <a href="#" class="tooltipwords" data-toggle="tooltip" title="Algo hecho al menos una vez al mes antes del derrame cerebral.">actividades</a> previas al ictus <a href="#" class="tooltipwords" data-toggle="tooltip" title="La misma capacidad que tenía para realizar sus tareas y actividades habituales antes del ictus.">tan bien como antes</a>?</h1>
 								<?php break; ?>
 
 							<?php } ?>
