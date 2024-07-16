@@ -27,6 +27,11 @@
 								<?php case 'es-es': ?>
 									<h1>El paciente está <a href="#" class="tootipwords" data-toggle="tooltip" title="No es necesario que el paciente esté en cama todo el tiempo. Puede sentarse en ella, pero necesitaría mucha ayuda de otra persona para hacerlo.">restringido</a> a la cama, necesita <a href="#" class="tooltipwords" data-toggle="tooltip" title="La necesidad general de compañía y protección no debe considerarse asistencia.">asistencia</a> (de una persona capacitada o no) en todo momento y no se le puede dejar solo ni siquiera por unas horas.</h1>
 								<?php break; ?>
+
+								<?php case 'ch-sp': ?>
+									<h1>病人只能卧床，需<a href="#" class="tootipwords" data-toggle="tooltip" title="">要全时的</a>陪护（不管专业还是非专业<a href="#" class="tooltipwords" data-toggle="tooltip" title="">陪护</a>），陪护离开了数小时都不行	</h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" onclick="document.getElementById('formprincipal').submit();" value="Sim">

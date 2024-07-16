@@ -27,6 +27,10 @@
 								<?php case 'es-es': ?>
 									<h1>Sin embargo, el paciente puede sentarse en la cama sin ayuda O, si está en silla de ruedas, puede impulsarse y moverse por las habitaciones solo con la silla de ruedas.</h1>
 								<?php break; ?>	
+
+								<?php case 'ch-sp': ?>
+									<h1>但病人可以不需要帮助在床上坐起，或者，如果只能坐轮椅，可以自己独立操控/驱动轮椅？</h1>
+								<?php break; ?>
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

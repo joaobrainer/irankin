@@ -28,6 +28,10 @@
 									<h1>Por lo tanto, ¿el paciente puede realizar desplazamientos locales, llamar a un taxi (instruyendo al conductor) o utilizar el transporte público, pero con alguna/poca dificultad?</h1>		
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>病人能够安排本地出行、叫出租车（或给出租车司机指路）或坐公共交通工具，但存在些许困难？</h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

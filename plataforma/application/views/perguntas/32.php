@@ -28,6 +28,10 @@
 									<h1>¿El paciente es independiente pero tiene problemas de relación O se aísla una vez por semana o más (o diariamente)?</h1>		
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>病人能自理，但人际关系存在问题，或者具体说是每周一次或以上(甚至每天)跟周围人闹僵</h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

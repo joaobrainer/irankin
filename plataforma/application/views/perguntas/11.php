@@ -28,6 +28,10 @@
 									<h1>¿El paciente requiere <a href="#" class="tooltipwords" data-toggle="tooltip" title="El paciente puede ingerir alimentos preparados por él mismo. Este no es un tipo de asistencia. Otros pueden proporcionar alimentos y suplementos.">asistencia esencial</a> para comer?</h1>			
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>病人进食需要帮助吗？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

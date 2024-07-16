@@ -28,6 +28,10 @@
 									<h1>¿<a href="#" class="tooltipwords" data-toggle="tooltip" title="Al menos puede comprar un artículo solamente.">Puede</a> el paciente salir y comprar aunque sea un solo artículo en una tienda local? ¿O podría el paciente ir a un pub/bar, pedir y pagar una bebida él mismo?</h1>	
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>病人能否自行到周边的商店买小物件，或者到附近的酒馆/茶室给自己点一杯饮品吗？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

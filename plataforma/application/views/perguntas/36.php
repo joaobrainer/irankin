@@ -28,6 +28,10 @@
 									<h1>¿El paciente es capaz de realizar todas las actividades previas al ictus, pero con cambios O problemas con los estudios O no puede volver a los estudios con el mismo rendimiento que antes? <br>Responda NO si el paciente ahora no puede realizar estas actividades y necesita ayuda con otra actividad de rutina diaria.</h1>		
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>病人能够进行卒中（中风）前所有的活动，但是否接受教学的方式发生变化、学习出现问题或无法恢复到此前的学习状态？<br>如果病人目前已无法进行学习活动，并且其他日常活动也需要他人帮助，请回答“否”</h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

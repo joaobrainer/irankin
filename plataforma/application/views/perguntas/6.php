@@ -29,6 +29,10 @@
 									<h1>¿Es el paciente completamente <a href="#" class="tooltipwords" data-toggle="tooltip" title="Un paciente físicamente capacitado, pero que no puede conducir, por motivos legales , no se considera discapacidad">independiente</a> y capaz de realizar todas las <a href="#" class="tooltipwords" data-toggle="tooltip" title="Algo hecho al menos una vez al mes antes del derrame cerebral.">actividades</a> previas al ictus <a href="#" class="tooltipwords" data-toggle="tooltip" title="La misma capacidad que tenía para realizar sus tareas y actividades habituales antes del ictus.">tan bien como antes</a>?</h1>
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>病人生活完全自理，并且完成所有工作和任务的能力跟卒中（中风）前没有什么不同	<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

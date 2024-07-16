@@ -28,6 +28,10 @@
 									<h1>¿El paciente puede caminar y moverse de forma <a href="#" class="tooltipwords" data-toggle="tooltip" title="Incluso utilizando bastón, muleta o andador, el paciente es capaz de realizar transferencias sin ayuda de otra persona.">independiente</a>, pero utilizando bastón o andador? Responda NO si el paciente no necesita ningún tipo de ayuda (bastón, muleta, andador…)</h1>			
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>病人是否能够独立行走/移动，但需要使用拐杖或助行架/助行器？如果病人不需要任何辅助工具（拐杖/助行器），请标记“否”	<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

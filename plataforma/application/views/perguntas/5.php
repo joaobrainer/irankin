@@ -28,6 +28,10 @@
 									<h1>Elija qué síntomas, signos, déficits o quejas (incluso las menores) tiene el paciente después del ictus.</h1>
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>病人卒中(中风）发生后，有以下哪一方面的症状/征象/功能缺陷/主诉 (即使轻微)？ 请选择：</h1>
+								<?php break; ?>
+
 						<?php } ?>
 
 							<?php if ($this->session->flashdata('error') == 'error') { ?>
@@ -46,6 +50,10 @@
 
 											<?php case 'es-es': ?>
 												Elige al menos una opción.
+											<?php break; ?>
+
+											<?php case 'ch-sp': ?>
+												请选择至少一个选项
 											<?php break; ?>
 
 										<?php } ?>
@@ -73,6 +81,10 @@
 													<h3 class="texticonesselecionaveis">No hay quejas ni síntomas.</h3>
 												<?php break; ?>
 
+												<?php case 'ch-sp': ?>
+													<h3 class="texticonesselecionaveis">没有症状或主诉</h3>
+												<?php break; ?>
+
 											<?php } ?>
 									</label>
 								</div>
@@ -92,6 +104,10 @@
 
 												<?php case 'es-es': ?>
 													<h3 class="texticonesselecionaveis">Motores</h3>
+												<?php break; ?>
+
+												<?php case 'ch-sp': ?>
+													<h3 class="texticonesselecionaveis">四肢活動/行动</h3>
 												<?php break; ?>
 
 											<?php } ?>			
@@ -116,6 +132,10 @@
 												<h3 class="texticonesselecionaveis">El habla</h3>
 											<?php break; ?>
 
+											<?php case 'ch-sp': ?>
+												<h3 class="texticonesselecionaveis">语言</h3>
+											<?php break; ?>
+
 										<?php } ?>	
 
 									</label>
@@ -136,6 +156,10 @@
 
 											<?php case 'es-es': ?>
 												<h3 class="texticonesselecionaveis">Lectura</h3>
+											<?php break; ?>
+
+											<?php case 'ch-sp': ?>
+												<h3 class="texticonesselecionaveis">阅读</h3>
 											<?php break; ?>
 
 										<?php } ?>
@@ -163,6 +187,10 @@
 												<h3 class="texticonesselecionaveis">Desequilibrio</h3>
 											<?php break; ?>
 
+											<?php case 'ch-sp': ?>
+												<h3 class="texticonesselecionaveis">平衡</h3>
+											<?php break; ?>
+
 										<?php } ?>
 									</label>
 								</div>
@@ -182,6 +210,10 @@
 
 											<?php case 'es-es': ?>
 												<h3 class="texticonesselecionaveis">Parestesia</h3>
+											<?php break; ?>
+
+											<?php case 'ch-sp': ?>
+												<h3 class="texticonesselecionaveis">麻木</h3>
 											<?php break; ?>
 
 										<?php } ?>
@@ -205,6 +237,10 @@
 												<h3 class="texticonesselecionaveis">Escrita</h3>
 											<?php break; ?>
 
+											<?php case 'ch-sp': ?>
+												<h3 class="texticonesselecionaveis">书写</h3>
+											<?php break; ?>
+
 										<?php } ?>
 									</label>
 								</div>
@@ -224,6 +260,10 @@
 
 											<?php case 'es-es': ?>
 												<h3 class="texticonesselecionaveis">Sensibilidad</h3>
+											<?php break; ?>
+
+											<?php case 'ch-sp': ?>
+												<h3 class="texticonesselecionaveis">感觉灵敏度</h3>
 											<?php break; ?>
 
 										<?php } ?>
@@ -251,6 +291,10 @@
 												<h3 class="texticonesselecionaveis">Cognitivos</h3>
 											<?php break; ?>
 
+											<?php case 'ch-sp': ?>
+												<h3 class="texticonesselecionaveis">认知</h3>
+											<?php break; ?>
+
 										<?php } ?>
 
 									</label>
@@ -272,6 +316,10 @@
 
 											<?php case 'es-es': ?>
 												<h3 class="texticonesselecionaveis">Visuales</h3>
+											<?php break; ?>
+
+											<?php case 'ch-sp': ?>
+												<h3 class="texticonesselecionaveis">视觉</h3>
 											<?php break; ?>
 
 										<?php } ?>
@@ -296,6 +344,10 @@
 												<h3 class="texticonesselecionaveis">Deglución</h3>
 											<?php break; ?>
 
+											<?php case 'ch-sp': ?>
+												<h3 class="texticonesselecionaveis">吞咽</h3>
+											<?php break; ?>
+
 										<?php } ?>
 									</label>
 								</div>
@@ -316,6 +368,10 @@
 
 											<?php case 'es-es': ?>
 												<h3 class="texticonesselecionaveis">Depresión</h3>
+											<?php break; ?>
+
+											<?php case 'ch-sp': ?>
+												<h3 class="texticonesselecionaveis">情绪</h3>
 											<?php break; ?>
 
 										<?php } ?>
@@ -342,6 +398,10 @@
 												<h3 class="texticonesselecionaveis">Dolor</h3>
 											<?php break; ?>
 
+											<?php case 'ch-sp': ?>
+												<h3 class="texticonesselecionaveis">疼痛</h3>
+											<?php break; ?>
+
 										<?php } ?>
 									</label>
 								</div>
@@ -361,6 +421,10 @@
 
 											<?php case 'es-es': ?>
 												<h3 class="texticonesselecionaveis">Higiene</h3>
+											<?php break; ?>
+
+											<?php case 'ch-sp': ?>
+												<h3 class="texticonesselecionaveis">个人卫生</h3>
 											<?php break; ?>
 
 										<?php } ?>
@@ -384,6 +448,10 @@
 												<h3 class="texticonesselecionaveis">Vestirse</h3>
 											<?php break; ?>
 
+											<?php case 'ch-sp': ?>
+												<h3 class="texticonesselecionaveis">穿衣</h3>
+											<?php break; ?>
+
 										<?php } ?>
 									</label>
 								</div>
@@ -403,6 +471,10 @@
 
 											<?php case 'es-es': ?>
 												<h3 class="texticonesselecionaveis">Relacionado com la comida</h3>
+											<?php break; ?>
+
+											<?php case 'ch-sp': ?>
+												<h3 class="texticonesselecionaveis">和进食相关</h3>
 											<?php break; ?>
 
 										<?php } ?>
@@ -429,6 +501,10 @@
 												<h3 class="texticonesselecionaveis">Incontinencia</h3>
 											<?php break; ?>
 
+											<?php case 'ch-sp': ?>
+												<h3 class="texticonesselecionaveis">大小便失禁</h3>
+											<?php break; ?>
+
 										<?php } ?>
 									</label>
 								</div>								
@@ -448,6 +524,10 @@
 
 											<?php case 'es-es': ?>
 												<h3 class="texticonesselecionaveis">Fatiga</h3>
+											<?php break; ?>
+
+											<?php case 'ch-sp': ?>
+												<h3 class="texticonesselecionaveis">疲劳/疲乏</h3>
 											<?php break; ?>
 
 										<?php } ?>
@@ -473,6 +553,10 @@
 
 										<?php case 'es-es': ?>
 											<h3 class="texticonesselecionaveis" style="margin-bottom: 3rem; opacity: 1;">Próximo</h3>			
+										<?php break; ?>
+
+										<?php case 'ch-sp': ?>
+											<h3 class="texticonesselecionaveis" style="margin-bottom: 3rem; opacity: 1;">下一步</h3>
 										<?php break; ?>
 
 									<?php } ?>

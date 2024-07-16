@@ -29,7 +29,11 @@
 						<a href="<?php print_r(base_url('perguntas/3?lang=en-us')) ?>" class="btn btnpt">Start <i class="fas fa-angle-right"></i></a>
 					<?php } elseif($language == 'es-es') { ?>
 						<a href="<?php print_r(base_url('perguntas/3?lang=es-es')) ?>" class="btn btnpt">Iniciar <i class="fas fa-angle-right"></i></a>
-					<?php } ?>
+					<?php } elseif ($language == 'ch-sp') { ?>
+						<a href="<?php print_r(base_url('perguntas/3?lang=ch-sp')) ?>" class="btn btnpt">开始 <i class="fas fa-angle-right"></i></a>
+					<?php }elseif ($language == 'ch-tr') { ?>
+						<a href="<?php print_r(base_url('perguntas/3?lang=ch-tr')) ?>" class="btn btnpt"> <i class="fas fa-angle-right"></i></a>
+					<?php }?>
 					
 				</div>
 			</div>
@@ -44,7 +48,13 @@
 					<?php if ($language != 'en-us') { ?>
 						<a href="<?= base_url('?lang=en-us') ?>"><img class="img-languages" src="<?= base_url('assets/images/languages/estados-unidos.png')?>" alt="EN-US"></a>
 					<?php } ?>
-					<!-- <a href="<?= base_url('?lang=ch-ch') ?>"><img class="img-languages" src="<?= base_url('assets/images/languages/china.png')?>" alt="CH"></a> -->
+					<?php if ($language != 'ch-sp') { ?>
+						<a href="<?= base_url('?lang=ch-sp') ?>"><img class="img-languages" src="<?= base_url('assets/images/languages/china.png')?>" alt="CH"></a>
+					<?php } ?>
+					<?php if ($language != 'ch-tr') { ?>
+						<a href="<?= base_url('?lang=ch-tr') ?>"><img class="img-languages" src="<?= base_url('assets/images/languages/hong-kong.png')?>" alt="CH"></a>
+					<?php } ?>
+
 				</div>
 			</div>
 

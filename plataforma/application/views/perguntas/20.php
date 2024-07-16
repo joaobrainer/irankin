@@ -28,6 +28,10 @@
 									<h1>Por lo tanto, el paciente es <a href="#" class="tooltipwords" data-toggle="tooltip" title="Trate de aclarar, investigando, la capacidad de la persona para realizar las tareas.">capaz</a> de <a href="#" class="tooltipwords" data-toggle="tooltip" title="Por ejemplo, buscar y guardar la ropa, limpiar después de una comida. Excluye tareas que no es necesario hacer todos los días, como usar la aspiradora.">realizar tareas básicas</a> si es necesario, aunque no las haga con normalidad sino con cierta dificultad.</h1>		
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>也就是说，如果需要，病人能够自己完成基本日常家务，即使病人平常并不需要自己做家务, 但存在些许困难？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

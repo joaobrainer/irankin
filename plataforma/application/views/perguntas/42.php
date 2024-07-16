@@ -28,6 +28,10 @@
 									<h1>¿El ictus redujo (ligeramente) las <a href="#" class="tooltipwords" data-toggle="tooltip" title="Participación activa que incluye tejer, coser, pintar, juegos, leer libros, pequeñas reparaciones en el hogar.">actividades</a> que realizaba el paciente en casa?</h1>		
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>卒中(中风) 是否减少了(与发病之前的状态相比，有轻度影响) 病人积极参与定期的 家庭活动？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

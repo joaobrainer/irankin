@@ -28,6 +28,10 @@
 									<h1>Por lo tanto, el paciente no puede moverse de una habitación a otra sin asistencia física, instrucción verbal o supervisión de otra persona o está restringido a una <a href="#" class="tooltipwords" data-toggle="tooltip" title="Para los pacientes que están en silla de ruedas, es posible que necesiten ayuda con los traslados (para subir o bajar de la silla, por ejemplo), pero podrían moverse de forma independiente, segura y eficiente sin ayuda.">silla de ruedas</a> (y luego puede moverse solo con la silla).</h1>		
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>也就是说，病人在没有他人身体帮助、言语指导或监督的情况下无法步行穿过房间，或者只能坐轮椅（即使病人能够自行推进轮椅<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

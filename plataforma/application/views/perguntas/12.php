@@ -28,6 +28,10 @@
 									<h1>¿Necesita el paciente ayuda para preparar una <a href="#" class="tooltipwords" data-toggle="tooltip" title="Por ejemplo. desayuno o merienda. El paciente puede correr el riesgo de quemar la casa si intenta cocinar.">comida sencilla</a>?</h1>		
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>病人做一顿简单的饭是否需要帮助?	<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

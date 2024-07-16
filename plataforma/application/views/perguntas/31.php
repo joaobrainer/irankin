@@ -28,6 +28,10 @@
 									<h1>¿Ha tenido el paciente cambios de temperamento, comunicación, cambios de humor, irritabilidad, depresión o comportamiento embotado?</h1>			
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>病人的脾气、沟通、情绪波动、不耐烦烦躁、抑郁或不合理行为的情况发生了变化？</h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

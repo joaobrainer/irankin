@@ -28,6 +28,10 @@
 									<h1>¿Tenía el paciente relaciones sociales o actividades de ocio muy restringidas antes del ictus?</h1>		
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>在卒中（中风）前，病人社交和休闲活动是否就很有限？</h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

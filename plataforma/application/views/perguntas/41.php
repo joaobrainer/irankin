@@ -31,6 +31,11 @@
 									<h1 style="margin-top: 2rem;">Conteste NO si el paciente depende completamente de otra persona para sentarse en la cama Y empujar una silla de ruedas, por ejemplo.</h1>	
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>病人能在床上不需要别人帮助坐起</h1>
+									<h1 style="margin-top: 2rem;">如果病人完全依赖他人才能在床上坐起，和需要坐轮椅，则回答“否”</h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

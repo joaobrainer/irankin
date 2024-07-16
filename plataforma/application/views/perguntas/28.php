@@ -28,6 +28,10 @@
 									<h1>¿Puede el paciente cuidar de <a href="#" class="tooltipwords" data-toggle="tooltip" title="Como niñera o cuidando de la pareja, de los padres, los nietos u otras personas dependientes.">otras personas</a> en la casa, incluso con responsabilidades reducidas?</h1>			
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>病人在家仍然会照顾他人，但照看减少<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

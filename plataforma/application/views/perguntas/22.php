@@ -28,6 +28,10 @@
 									<h1>¿<a href="#" class="tooltipwords" data-toggle="tooltip" title="Busque por un cambio con relación al nivel de responsabilidad anterior. La cuestión no es financiera. Se refiere a si los pacientes son capaces o no de responsabilizarse del dinero que tienen.">Puede</a> el paciente administrar su propia pensión/ingresos y pagar facturas, pero con alguna o poca dificultad?</h1>		
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>病人能够管理他/她自己的养老金/收入，以及安排支付账单，但存在些许困难？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

@@ -25,6 +25,10 @@
 							<h1>Elija los botones según los datos disponibles y más fiables del historial del paciente</h1>	
 						<?php break; ?>
 
+						<?php case 'ch-sp': ?>
+							<h1>根据病人提供的最可信的信息选择按钮</h1>
+						<?php break; ?>
+
 					<?php } ?>
 					</div>
 				</div>
@@ -45,6 +49,10 @@
 
 								<?php case 'es-es': ?>
 									ERROR. Pruebe con más datos.			
+								<?php break; ?>
+
+								<?php case 'ch-sp': ?>
+									失败，请尝试更多的数据
 								<?php break; ?>
 
 							<?php } ?>
@@ -75,6 +83,10 @@
 									<h3 class="texticonesselecionaveis2">Caminando</h3>			
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h3 class="texticonesselecionaveis2">行走</h3>
+								<?php break; ?>
+
 							<?php } ?>						
 							</label>						
 						</div>						
@@ -97,6 +109,10 @@
 
 								<?php case 'es-es': ?>
 									<h3 class="texticonesselecionaveis2">Utilizando el baño</h3>			
+								<?php break; ?>
+
+								<?php case 'ch-sp': ?>
+									<h3 class="texticonesselecionaveis2">使用厕所</h3>
 								<?php break; ?>
 
 							<?php } ?>
@@ -123,6 +139,10 @@
 									<h3 class="texticonesselecionaveis2">Rutina de higiene personal</h3>			
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h3 class="texticonesselecionaveis2">常规的日常卫生</h3>
+								<?php break; ?>
+
 							<?php } ?>
 							</label>
 						</div>
@@ -145,6 +165,10 @@
 
 									<?php case 'es-es': ?>
 										<h3 class="texticonesselecionaveis2">Comiendo</h3>			
+									<?php break; ?>
+
+									<?php case 'ch-sp': ?>
+										<h3 class="texticonesselecionaveis2">进食</h3>
 									<?php break; ?>
 
 								<?php } ?>
@@ -171,6 +195,10 @@
 										<h3 class="texticonesselecionaveis2">Tareas domésticas</h3>			
 									<?php break; ?>
 
+									<?php case 'ch-sp': ?>
+										<h3 class="texticonesselecionaveis2">做家务</h3>
+									<?php break; ?>
+
 								<?php } ?>
 							</label>
 						</div>
@@ -193,6 +221,10 @@
 
 									<?php case 'es-es': ?>
 										<h3 class="texticonesselecionaveis2">Gastos del hogar</h3>				
+									<?php break; ?>
+
+									<?php case 'ch-sp': ?>
+										<h3 class="texticonesselecionaveis2">家务理財</h3>
 									<?php break; ?>
 
 								<?php } ?>
@@ -219,6 +251,10 @@
 										<h3 class="texticonesselecionaveis2">Movilidad en la ciudad</h3>				
 									<?php break; ?>
 
+									<?php case 'ch-sp': ?>
+										<h3 class="texticonesselecionaveis2">在本地出行</h3>
+									<?php break; ?>
+
 								<?php } ?>
 							</label>
 						</div>
@@ -241,6 +277,10 @@
 
 									<?php case 'es-es': ?>
 										<h3 class="texticonesselecionaveis2">Compras locales</h3>				
+									<?php break; ?>
+
+									<?php case 'ch-sp': ?>
+										<h3 class="texticonesselecionaveis2">在本地购物</h3>
 									<?php break; ?>
 
 								<?php } ?>
@@ -267,6 +307,10 @@
 										<h3 class="texticonesselecionaveis2">Cuidar a la familia en casa</h3>			
 									<?php break; ?>
 
+									<?php case 'ch-sp': ?>
+										<h3 class="texticonesselecionaveis2">在家中照顾家人</h3>
+									<?php break; ?>
+
 								<?php } ?>
 							</label>
 						</div>
@@ -289,6 +333,10 @@
 
 									<?php case 'es-es': ?>
 										<h3 class="texticonesselecionaveis2">Actividades sociales y de entretenimiento</h3>			
+									<?php break; ?>
+
+									<?php case 'ch-sp': ?>
+										<h3 class="texticonesselecionaveis2">社交和空余时间活动</h3>
 									<?php break; ?>
 
 								<?php } ?>
@@ -316,6 +364,10 @@
 										<h3 class="texticonesselecionaveis2">Relaciones</h3>			
 									<?php break; ?>
 
+									<?php case 'ch-sp': ?>
+										<h3 class="texticonesselecionaveis2">人际关系</h3>
+									<?php break; ?>
+
 								<?php } ?>
 
 							</label>
@@ -339,6 +391,10 @@
 
 									<?php case 'es-es': ?>
 										<h3 class="texticonesselecionaveis2">Trabajando</h3>			
+									<?php break; ?>
+
+									<?php case 'ch-sp': ?>
+										<h3 class="texticonesselecionaveis2">工作</h3>
 									<?php break; ?>
 
 								<?php } ?>
@@ -366,6 +422,10 @@
 										<h3 class="texticonesselecionaveis2">Estudiando</h3>	
 									<?php break; ?>
 
+									<?php case 'ch-sp': ?>
+										<h3 class="texticonesselecionaveis2">学习</h3>
+									<?php break; ?>
+
 								<?php } ?>
 							</label>
 						</div>
@@ -388,6 +448,10 @@
 
 									<?php case 'es-es': ?>
 										<h3 class="texticonesselecionaveis2">Actividades en casa</h3>					
+									<?php break; ?>
+
+									<?php case 'ch-sp': ?>
+										<h3 class="texticonesselecionaveis2">家庭活动</h3>
 									<?php break; ?>
 
 								<?php } ?>
@@ -415,6 +479,10 @@
 
 							<?php case 'es-es': ?>
 								<h3 class="texticonesselecionaveis" style="margin-bottom: 3rem; opacity: 1;">Evaluar el Rankin</h3>	
+							<?php break; ?>
+
+							<?php case 'ch-sp': ?>
+								<h3 class="texticonesselecionaveis" style="margin-bottom: 3rem; opacity: 1;">Rankin 评分</h3>
 							<?php break; ?>
 
 						<?php } ?>
