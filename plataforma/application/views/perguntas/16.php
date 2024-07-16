@@ -32,6 +32,10 @@
 									<h1>病人是否能够在家中或病房内行走/移动，而不需他人的身体帮助、言语指导、监督？	<span style="color: red;"></span> </h1>
 								<?php break; ?>
 
+								<?php case 'ch-tr': ?>
+									<h1>病人無需他人的肢體幫助或口頭指導或監督下，是否能夠在家中或病房內行走/移動？<span style="color: red;"></span> </h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

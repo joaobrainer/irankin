@@ -32,6 +32,10 @@
 									<h1>病人做一顿简单的饭是否需要帮助?	<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
 								<?php break; ?>
 
+								<?php case 'ch-tr': ?>
+									<h1>病人是否需要在協助下準備簡易的餐點？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

@@ -32,6 +32,10 @@
 									<h1>病人能够进行卒中（中风）前所有的活动，但是否接受教学的方式发生变化、学习出现问题或无法恢复到此前的学习状态？<br>如果病人目前已无法进行学习活动，并且其他日常活动也需要他人帮助，请回答“否”</h1>
 								<?php break; ?>
 
+								<?php case 'ch-tr': ?>
+									<h1>病人是否能夠完全進行先前的活動，但需要改變接受教育的方式、或學習出現問題、或無法恢復到中風前的學習狀態？<br>如病人現在無法進行這些活動並需要在協助下進行其他日常活動，請回答"否"。</h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

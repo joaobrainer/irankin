@@ -25,6 +25,14 @@
 							<h3 class="texticonesselecionaveis">Puntaje</h3>
 						<?php break; ?>
 
+						<?php case 'ch-sp': ?>
+							<h3 class="texticonesselecionaveis">评分</h3>
+						<?php break; ?>
+
+						<?php case 'ch-tr': ?>
+							<h3 class="texticonesselecionaveis">評估分數</h3>
+						<?php break; ?>
+
 					<?php } ?>
 						<h2><?php print_r($this->session->userdata('pontuacao')); ?></h2>
 					</div>
@@ -131,6 +139,31 @@
 											$message = '';
 											break;
 									}
+								}elseif ($this->session->userdata('lang') == 'ch-tr') {
+									switch ($this->session->userdata('pontuacao')) {
+										case '0':
+											$message = '完全沒有症狀。病人未察覺到任何因中風引起新的功能限制或症狀，甚至很輕微的也沒有。';
+											break;
+										case '1':
+											$message = '儘管有症狀，但沒有明顯的殘疾；能夠執行所有日常職責和活動。';
+											break;
+										case '2':
+											$message = '輕度殘疾：無法完全進行先前的活動，但能在沒有協助下自理';
+											break;
+										case '3':
+											$message = '中度殘疾：需要一些他人幫助，但能夠在沒有協助下走動。';
+											break;
+										case '4':
+											$message = '中度嚴重殘疾：無法在沒有協助下行走，無法在沒有幫助下照顧自己的身體需求。';
+											break;
+										case '5':
+											$message = '嚴重殘疾：臥床不起、大小便失禁，需要持續的護理和關注。';
+											break;
+										default:
+											$message = '';
+											break;
+									}
+									
 								}
 
 								print_r($message);
@@ -157,6 +190,10 @@
 
 							<?php case 'ch-sp': ?>
 								<a href="<?php print_r(base_url('')) ?>" class="btn btneng">重新加载</a>
+							<?php break; ?>
+
+							<?php case 'ch-tr': ?>
+								<a href="<?php print_r(base_url('')) ?>" class="btn btneng">重新加載</a>
 							<?php break; ?>
 
 						<?php } ?>

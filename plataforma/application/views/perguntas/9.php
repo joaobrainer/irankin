@@ -29,6 +29,10 @@
 							<h1>根据病人提供的最可信的信息选择按钮</h1>
 						<?php break; ?>
 
+						<?php case 'ch-tr': ?>
+							<h1>請選擇最符合病人情況的選項。</h1>
+						<?php break; ?>
+
 					<?php } ?>
 					</div>
 				</div>
@@ -53,6 +57,10 @@
 
 								<?php case 'ch-sp': ?>
 									失败，请尝试更多的数据
+								<?php break; ?>
+
+								<?php case 'ch-tr': ?>
+									失敗。嘗試提供更多數據。
 								<?php break; ?>
 
 							<?php } ?>
@@ -87,6 +95,10 @@
 									<h3 class="texticonesselecionaveis2">行走</h3>
 								<?php break; ?>
 
+								<?php case 'ch-tr': ?>
+									<h3 class="texticonesselecionaveis2">行走</h3>
+								<?php break; ?>
+
 							<?php } ?>						
 							</label>						
 						</div>						
@@ -113,6 +125,10 @@
 
 								<?php case 'ch-sp': ?>
 									<h3 class="texticonesselecionaveis2">使用厕所</h3>
+								<?php break; ?>
+
+								<?php case 'ch-tr': ?>
+									<h3 class="texticonesselecionaveis2">使用廁所</h3>
 								<?php break; ?>
 
 							<?php } ?>
@@ -143,6 +159,10 @@
 									<h3 class="texticonesselecionaveis2">常规的日常卫生</h3>
 								<?php break; ?>
 
+								<?php case 'ch-tr': ?>
+									<h3 class="texticonesselecionaveis2">日常梳洗/ 個人衛生</h3>
+								<?php break; ?>
+
 							<?php } ?>
 							</label>
 						</div>
@@ -169,6 +189,10 @@
 
 									<?php case 'ch-sp': ?>
 										<h3 class="texticonesselecionaveis2">进食</h3>
+									<?php break; ?>
+
+									<?php case 'ch-tr': ?>
+										<h3 class="texticonesselecionaveis2">進食</h3>
 									<?php break; ?>
 
 								<?php } ?>
@@ -199,6 +223,10 @@
 										<h3 class="texticonesselecionaveis2">做家务</h3>
 									<?php break; ?>
 
+									<?php case 'ch-tr': ?>
+										<h3 class="texticonesselecionaveis2">做家務</h3>
+									<?php break; ?>
+
 								<?php } ?>
 							</label>
 						</div>
@@ -225,6 +253,10 @@
 
 									<?php case 'ch-sp': ?>
 										<h3 class="texticonesselecionaveis2">家务理財</h3>
+									<?php break; ?>
+
+									<?php case 'ch-tr': ?>
+										<h3 class="texticonesselecionaveis2">日常家務理財</h3>
 									<?php break; ?>
 
 								<?php } ?>
@@ -255,6 +287,10 @@
 										<h3 class="texticonesselecionaveis2">在本地出行</h3>
 									<?php break; ?>
 
+									<?php case 'ch-tr': ?>
+										<h3 class="texticonesselecionaveis2">在居所附近自行出行</h3>
+									<?php break; ?>
+
 								<?php } ?>
 							</label>
 						</div>
@@ -281,6 +317,10 @@
 
 									<?php case 'ch-sp': ?>
 										<h3 class="texticonesselecionaveis2">在本地购物</h3>
+									<?php break; ?>
+
+									<?php case 'ch-tr': ?>
+										<h3 class="texticonesselecionaveis2">在居所附近自行購物</h3>
 									<?php break; ?>
 
 								<?php } ?>
@@ -311,6 +351,10 @@
 										<h3 class="texticonesselecionaveis2">在家中照顾家人</h3>
 									<?php break; ?>
 
+									<?php case 'ch-tr': ?>
+										<h3 class="texticonesselecionaveis2">在家照顧其他家人</h3>
+									<?php break; ?>
+
 								<?php } ?>
 							</label>
 						</div>
@@ -337,6 +381,10 @@
 
 									<?php case 'ch-sp': ?>
 										<h3 class="texticonesselecionaveis2">社交和空余时间活动</h3>
+									<?php break; ?>
+
+									<?php case 'ch-tr': ?>
+										<h3 class="texticonesselecionaveis2">社交與休閒活動</h3>
 									<?php break; ?>
 
 								<?php } ?>
@@ -368,6 +416,10 @@
 										<h3 class="texticonesselecionaveis2">人际关系</h3>
 									<?php break; ?>
 
+									<?php case 'ch-tr': ?>
+										<h3 class="texticonesselecionaveis2">人際關係</h3>
+									<?php break; ?>
+
 								<?php } ?>
 
 							</label>
@@ -394,6 +446,10 @@
 									<?php break; ?>
 
 									<?php case 'ch-sp': ?>
+										<h3 class="texticonesselecionaveis2">工作</h3>
+									<?php break; ?>
+
+									<?php case 'ch-tr': ?>
 										<h3 class="texticonesselecionaveis2">工作</h3>
 									<?php break; ?>
 
@@ -426,6 +482,10 @@
 										<h3 class="texticonesselecionaveis2">学习</h3>
 									<?php break; ?>
 
+									<?php case 'ch-tr': ?>
+										<h3 class="texticonesselecionaveis2">學習</h3>
+									<?php break; ?>
+
 								<?php } ?>
 							</label>
 						</div>
@@ -452,6 +512,10 @@
 
 									<?php case 'ch-sp': ?>
 										<h3 class="texticonesselecionaveis2">家庭活动</h3>
+									<?php break; ?>
+
+									<?php case 'ch-tr': ?>
+										<h3 class="texticonesselecionaveis2">家庭活動</h3>
 									<?php break; ?>
 
 								<?php } ?>
@@ -483,6 +547,10 @@
 
 							<?php case 'ch-sp': ?>
 								<h3 class="texticonesselecionaveis" style="margin-bottom: 3rem; opacity: 1;">Rankin 评分</h3>
+							<?php break; ?>
+
+							<?php case 'ch-tr': ?>
+								<h3 class="texticonesselecionaveis" style="margin-bottom: 3rem; opacity: 1;">Rankin 評分</h3>
 							<?php break; ?>
 
 						<?php } ?>

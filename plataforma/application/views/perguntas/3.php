@@ -32,6 +32,10 @@
 									<h1>病人只能卧床，需<a href="#" class="tootipwords" data-toggle="tooltip" title="">要全时的</a>陪护（不管专业还是非专业<a href="#" class="tooltipwords" data-toggle="tooltip" title="">陪护</a>），陪护离开了数小时都不行	</h1>
 								<?php break; ?>
 
+								<?php case 'ch-tr': ?>
+									<h1>病人只能卧在床上，需要（由受過培訓或未經培訓的人員）一直從旁協助，並且即使只有幾個小時也不能被獨留。<a href="#" class="tootipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" onclick="document.getElementById('formprincipal').submit();" value="Sim">

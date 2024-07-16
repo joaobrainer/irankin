@@ -32,6 +32,10 @@
 									<h1>在卒中（中风）前，病人社交和休闲活动是否就很有限？</h1>
 								<?php break; ?>
 
+								<?php case 'ch-tr': ?>
+									<h1>中風前,病人在社交和日常消遣活動是否有限制？</h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

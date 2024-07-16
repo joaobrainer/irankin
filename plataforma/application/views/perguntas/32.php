@@ -32,6 +32,10 @@
 									<h1>病人能自理，但人际关系存在问题，或者具体说是每周一次或以上(甚至每天)跟周围人闹僵</h1>
 								<?php break; ?>
 
+								<?php case 'ch-tr': ?>
+									<h1>病人能獨立自理，但有人際關係問題，或者每周有一次或以上（或每天）感到孤立。</h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

@@ -32,6 +32,10 @@
 									<h1>也就是说，病人在没有他人身体帮助、言语指导或监督的情况下无法步行穿过房间，或者只能坐轮椅（即使病人能够自行推进轮椅<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
 								<?php break; ?>
 
+								<?php case 'ch-tr': ?>
+									<h1>因此，病人在沒有他人的肢體幫助或口頭指導或監督的情況下無法進出房間，或者只能坐在輪椅上（即使病人能夠自行推動）。<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

@@ -32,6 +32,10 @@
 										<h1>病人卒中（中风）前是学生？</h1>
 									<?php break; ?>
 
+									<?php case 'ch-tr': ?>
+										<h1>中風前病人是否在學？</h1>
+									<?php break; ?>
+
 								<?php } ?>						
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

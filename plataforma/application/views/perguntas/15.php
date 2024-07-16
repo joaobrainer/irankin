@@ -36,6 +36,11 @@
 									<p>说明：如果你认为病人不需要这种帮助，他/她应该比平时花更多的时间</p>
 								<?php break; ?>
 
+								<?php case 'ch-tr': ?>
+									<h1>病人是否需要在少許協助洗澡、淋浴或刮鬍子？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<p>說明：如果您認為病人不需要那些協助，他/她應該比平時花費更多的時間。</p>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

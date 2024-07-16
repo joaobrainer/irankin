@@ -32,6 +32,10 @@
 									<h1>病人能够管理他/她自己的养老金/收入，以及安排支付账单，但存在些许困难？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
 								<?php break; ?>
 
+								<?php case 'ch-tr': ?>
+									<h1>病人能夠管理他/她自己的收入或退休金，並且安排支付帳單，但有一些/輕微的困難?<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

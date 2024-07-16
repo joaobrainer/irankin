@@ -36,6 +36,11 @@
 									<h1 style="margin-top: 2rem;">如果病人完全依赖他人才能在床上坐起，和需要坐轮椅，则回答“否”</h1>
 								<?php break; ?>
 
+								<?php case 'ch-tr': ?>
+									<h1>但是，病人能否在沒有任何幫助的情況下在床上坐起來嗎？</h1>
+									<h1 style="margin-top: 2rem;">如果病人完全依賴旁人才能在床上坐起來並推動輪椅，請回答“否”。</h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

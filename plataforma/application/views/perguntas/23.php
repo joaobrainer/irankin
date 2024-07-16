@@ -32,6 +32,10 @@
 									<h1>病人安排本地出行、搭载出租车或坐公共交通工具必要他人帮助吗？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
 								<?php break; ?>
 
+								<?php case 'ch-tr': ?>
+									<h1>病人是否必須在協助下乘搭的士或公共交通工具在附近出行？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 							<?php if ($this->session->userdata('lang') == 'pt-br') { ?>
 								

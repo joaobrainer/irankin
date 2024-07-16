@@ -964,6 +964,8 @@ class Perguntas extends CI_Controller {
 			$dados['titulo'] = "iRankin | Puntuación";
 		}elseif ($this->session->userdata('lang') == 'ch-sp') {
 			$dados['titulo'] = "iRankin | 评分";
+		}elseif ($this->session->userdata('lang') == 'ch-tr') {
+			$dados['titulo'] = "iRankin | 評估分數";
 		}else{
 			$dados['titulo'] = "iRankin | Grading Score";
 		}

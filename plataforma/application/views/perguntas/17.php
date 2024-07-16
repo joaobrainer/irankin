@@ -32,6 +32,10 @@
 									<h1>病人是否能够独立行走/移动，但需要使用拐杖或助行架/助行器？如果病人不需要任何辅助工具（拐杖/助行器），请标记“否”	<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
 								<?php break; ?>
 
+								<?php case 'ch-tr': ?>
+									<h1>病人是否能夠獨立用拐杖/手杖或助行架/助行器攙扶下自行走動/移動？如果病人不需要任何輔助工具（拐杖/手杖/助行器），請回答“否”。<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

@@ -31,6 +31,11 @@
 								<?php case 'ch-sp': ?>
 									<h1>但病人可以不需要帮助在床上坐起，或者，如果只能坐轮椅，可以自己独立操控/驱动轮椅？</h1>
 								<?php break; ?>
+
+								<?php case 'ch-tr': ?>
+									<h1>然而，病人能否在沒有任何幫助下在床上坐起來；或如病人只能坐在輪椅上的話，能否自己獨立操控輪椅？</h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

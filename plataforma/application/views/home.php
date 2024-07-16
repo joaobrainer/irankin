@@ -32,7 +32,7 @@
 					<?php } elseif ($language == 'ch-sp') { ?>
 						<a href="<?php print_r(base_url('perguntas/3?lang=ch-sp')) ?>" class="btn btnpt">开始 <i class="fas fa-angle-right"></i></a>
 					<?php }elseif ($language == 'ch-tr') { ?>
-						<a href="<?php print_r(base_url('perguntas/3?lang=ch-tr')) ?>" class="btn btnpt"> <i class="fas fa-angle-right"></i></a>
+						<a href="<?php print_r(base_url('perguntas/3?lang=ch-tr')) ?>" class="btn btnpt">開始 <i class="fas fa-angle-right"></i></a>
 					<?php }?>
 					
 				</div>

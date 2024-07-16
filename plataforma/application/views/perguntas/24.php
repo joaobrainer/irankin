@@ -32,6 +32,10 @@
 									<h1>病人能够安排本地出行、叫出租车（或给出租车司机指路）或坐公共交通工具，但存在些许困难？</h1>
 								<?php break; ?>
 
+								<?php case 'ch-tr': ?>
+									<h1>因此，病人能夠在附近自行出行、叫計程車（指導司機）或乘搭公共交通工具，但有一些/輕微的困難？</h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">
