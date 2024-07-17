@@ -28,6 +28,14 @@
 									<h1>¿Es esencial la asistencia para las <a href="#" class="tooltipwords" data-toggle="tooltip" title="Por ejemplo, buscar y guardar la ropa o limpiar después de una comida. Excluya tareas que no es necesario realizar todos los días, como usar una aspiradora o mover muebles.">tareas básicas</a>, incluso si el paciente no las realiza de forma rutinaria?</h1>		
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>病人做基本日常家务是否需要帮助？即使病人平常并不需要自己做家务。<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
+								<?php case 'ch-tr': ?>
+									<h1>病人是否必須在協助下才可以做基本的日常家務，即使病人平時並不用做任何家務?<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

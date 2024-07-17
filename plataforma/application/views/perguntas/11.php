@@ -21,11 +21,19 @@
 								<?php break; ?>
 
 								<?php case 'en-us': ?>
-									<h1>The patient needs essential <a href="#" class="tooltipwords" data-toggle="tooltip" title="Patients may eat a modified diet on their own. This is not a kind of assistance. Others may provide food and implements.">assistance for eating</a></h1>		
+									<h1>The patient needs essential <a href="#" class="tooltipwords" data-toggle="tooltip" title="Patients may eat a modified diet on their own. This is not a kind of assistance. Others may provide food and implements.">assistance for eating</a>?</h1>		
 								<?php break; ?>
 
 								<?php case 'es-es': ?>
 									<h1>¿El paciente requiere <a href="#" class="tooltipwords" data-toggle="tooltip" title="El paciente puede ingerir alimentos preparados por él mismo. Este no es un tipo de asistencia. Otros pueden proporcionar alimentos y suplementos.">asistencia esencial</a> para comer?</h1>			
+								<?php break; ?>
+
+								<?php case 'ch-sp': ?>
+									<h1>病人进食需要帮助吗？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
+								<?php case 'ch-tr': ?>
+									<h1>病人是否需要在協助下進食？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
 								<?php break; ?>
 
 							<?php } ?>

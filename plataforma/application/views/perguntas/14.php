@@ -28,6 +28,14 @@
 									<h1>¿Necesita el paciente <a href="#" class="tooltipwords" data-toggle="tooltip" title="Otros pueden proporcionar los implementos y esto no debe considerarse asistencia.">ayuda</a> para lavarse la cara, peinarse y limpiarse los dientes o colocarse dientes postizos?</h1>	
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>病人洗脸、梳头和刷牙/固定假牙需要帮助吗？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
+								<?php case 'ch-tr': ?>
+									<h1>病人是否需要在協助下洗臉、梳頭髮和刷牙/裝上假牙？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

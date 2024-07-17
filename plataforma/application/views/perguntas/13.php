@@ -28,6 +28,14 @@
 									<h1>¿Es imprescindible<a href="#" class="tooltipwords" data-toggle="tooltip" title="Usar el baño sin ayuda significa: llegar al baño; desnudarse lo suficiente, límpiarse; vestirse y salir de la habitación."> la asistencia</a> para utilizar el baño?</h1>			
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>病人使用厕所需要帮助吗？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
+								<?php case 'ch-tr': ?>
+									<h1>病人是否需要在協助下如廁？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

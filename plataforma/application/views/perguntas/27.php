@@ -28,6 +28,14 @@
 									<h1>¿Estaba el paciente acostumbrado a <a href="#" class="tooltipwords" data-toggle="tooltip" title="Como niñera o cuidando de la pareja, de los padres, los nietos u otras personas dependientes.">cuidar a otras</a> personas en la casa?</h1>	
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>病人以往在家会照顾他人<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
+								<?php case 'ch-tr': ?>
+									<h1>病人此前是否在家中照顧其他人？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

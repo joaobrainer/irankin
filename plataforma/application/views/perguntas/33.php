@@ -28,6 +28,14 @@
 									<h1>Suponiendo que el paciente estaba <a href="#" class="tooltipwords" data-toggle="tooltip" title="Trabajo se refiere al empleo remunerado y no incluye el trabajo voluntario (que puede incluirse en actividades sociales y de ocio). Los pacientes jubilados no son elegibles para esta sección">empleado</a> antes del accidente cerebrovascular, ¿el paciente puede realizar todas las actividades previas al accidente cerebrovascular, pero solo reduciendo el nivel de trabajo (p. ej., de tiempo completo a tiempo parcial O cambio en el nivel de responsabilidad O pérdida de empleo)?</h1>			
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>如果病人在卒中（中风）前有工作，病人是否能够继续卒中（中风）前所有的活动，但因病情减少工作量（例如从全勤变为转岗、半退甚至病退）？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
+								<?php case 'ch-tr': ?>
+									<h1>如病人中風前有工作，中風後仍能夠繼續執行中風前的所有活動，但工作強度因病情而降低了嗎（例如全職轉為兼職、或轉職或失業）？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

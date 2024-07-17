@@ -28,6 +28,14 @@
 									<h1>¿O el paciente ahora no puede volver a trabajar, pero sigue siendo independiente para las actividades diarias Y no necesita ayuda para caminar, por ejemplo?</h1>			
 								<?php break; ?>
 
+								<?php case 'ch-sp': ?>
+									<h1>或者患现在无法返回工作，但仍然能在不需要帮助下进行日常生活活动，并且能够独立行走/移动 ？</h1>
+								<?php break; ?>
+
+								<?php case 'ch-tr': ?>
+									<h1>或者病人仍然可以獨立進行日常活動，並且不需要輔助工具行走，但現時無法返回工作崗位？</h1>
+								<?php break; ?>
+
 							<?php } ?>
 
 							<label for="yes1" class="yes"><input type="radio" name="primeira" id="yes1" value="Sim" onclick="document.getElementById('formprincipal').submit();">

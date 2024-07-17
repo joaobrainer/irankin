@@ -18,6 +18,12 @@ class Perguntas extends CI_Controller {
 				case 'es-es':
 					$this->session->set_userdata('lang', 'es-es');
 					break;
+				case 'ch-sp':
+					$this->session->set_userdata('lang', 'ch-sp');
+					break;
+				case 'ch-tr':
+					$this->session->set_userdata('lang', 'ch-tr');
+					break;				
 				default:
 					$this->session->set_userdata('lang', 'en-us');
 					break;
@@ -954,8 +960,14 @@ class Perguntas extends CI_Controller {
 			$dados['titulo'] = "iRankin | Pontuação";
 		} elseif ($this->session->userdata('lang') == 'en-us') {
 			$dados['titulo'] = "iRankin | Grading Score";
-		} else {
-			$dados['titulo'] = "iRankin | About";
+		} elseif ($this->session->userdata('lang') == 'es-es'){
+			$dados['titulo'] = "iRankin | Puntuación";
+		}elseif ($this->session->userdata('lang') == 'ch-sp') {
+			$dados['titulo'] = "iRankin | 评分";
+		}elseif ($this->session->userdata('lang') == 'ch-tr') {
+			$dados['titulo'] = "iRankin | 評估分數";
+		}else{
+			$dados['titulo'] = "iRankin | Grading Score";
 		}
 
 		$this->session->set_userdata('pergunta', '');
