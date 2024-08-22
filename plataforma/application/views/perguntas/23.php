@@ -29,11 +29,11 @@
 								<?php break; ?>
 
 								<?php case 'ch-sp': ?>
-									<h1>病人安排本地出行、搭载出租车或坐公共交通工具必要他人帮助吗？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>病人安排本地出行、搭载出租车或坐公共交通工<a href="#" class="tooltipwords" data-toggle="tooltip" title="这个问题不是在于病人是否负担得起叫出租车的费用，而在于能否执行这一项任务的能力去判断。这个问题是指病人是否可以只靠自己在当地走动">具必要他人帮助吗？</a></h1>
 								<?php break; ?>
 
 								<?php case 'ch-tr': ?>
-									<h1>病人是否必須在協助下乘搭的士或公共交通工具在附近出行？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>病人是否必須在協助下乘搭的士或公共交通<a href="#" class="tooltipwords" data-toggle="tooltip" title="這個問題不是在於病人是否負擔得起叫計程車的費用，而是在於能否執行這一任務的能力本身。 這個問題是指患者是否可以只靠自己在當地走動。">工具在附近出行？</a></h1>
 								<?php break; ?>
 
 							<?php } ?>

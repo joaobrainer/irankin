@@ -29,11 +29,11 @@
 								<?php break; ?>
 
 								<?php case 'ch-sp': ?>
-									<h1>如果病人在卒中（中风）前有工作，病人是否能够继续卒中（中风）前所有的活动，但因病情减少工作量（例如从全勤变为转岗、半退甚至病退）？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>如果病人在卒中（<a href="#" class="tooltipwords" data-toggle="tooltip" title="工作是指有报酬的工作，不包括志愿工作(志愿工作应该归类在“社会和休闲活动”项目)。已经退休的病人不适合在这一部分评估">中风</a>）前有工作，病人是否能够继续卒中（中风）前所有的活动，但因病情减少工作量（例如从全勤变为转岗、半退甚至病退）？</h1>
 								<?php break; ?>
 
 								<?php case 'ch-tr': ?>
-									<h1>如病人中風前有工作，中風後仍能夠繼續執行中風前的所有活動，但工作強度因病情而降低了嗎（例如全職轉為兼職、或轉職或失業）？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1><a href="#" class="tooltipwords" data-toggle="tooltip" title="工作是受薪的工作，不包括義工（應被歸類在「社會和休閒活動」）。這一部分的評估不適用於已退休的病人。">如病人中風前有工作</a>，中風後仍能夠繼續執行中風前的所有活動，但工作強度因病情而降低了嗎（例如全職轉為兼職、或轉職或失業）？</h1>
 								<?php break; ?>
 
 							<?php } ?>

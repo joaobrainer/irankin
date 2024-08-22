@@ -29,11 +29,11 @@
 								<?php break; ?>
 
 								<?php case 'ch-sp': ?>
-									<h1>关于社交和休闲活动，病人参与的频率不到以前一半或很少参加？还是病人比以前更“宅”或社交互动减少？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1><a href="#" class="tooltipwords" data-toggle="tooltip" title="它们包括爱好和兴趣，包括家里或家外的活动。家外的活动：去酒吧、餐厅、俱乐部、教堂、电影院、拜访朋友、散步。家里的活动：涉及是否“活跃”参与，包括编织、缝纫、绘画、游戏、阅读书籍、家居装饰。">关于社交和休闲活动</a>，病人参与的频率不到以前一半或很少参加？还是病人比以前更“宅”或社交互动减少？</h1>
 								<?php break; ?>
 
 								<?php case 'ch-tr': ?>
-									<h1>關於社交和日常消遣活動，病人參加的頻率減少一半以上或很少參加嗎？或者病人比以前更「宅」或更少社交互動嗎？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1><a href="#" class="tooltipwords" data-toggle="tooltip" title="它們包括嗜好和興趣、外出或在家的活動。 外出的活動如去酒吧、餐廳、俱樂部、教堂、電影院、拜訪朋友、散步。在家的活動如包括「活躍」參與編織、縫紉、繪畫、遊戲、閱讀書籍和家居裝飾。">關於社交和日常消遣活動</a>，病人參加的頻率減少一半以上或很少參加嗎？或者病人比以前更「宅」或更少社交互動嗎？</h1>
 								<?php break; ?>
 
 							<?php } ?>

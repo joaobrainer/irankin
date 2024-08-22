@@ -29,11 +29,11 @@
 								<?php break; ?>
 
 								<?php case 'ch-sp': ?>
-									<h1>病人只能卧床，需<a href="#" class="tootipwords" data-toggle="tooltip" title="">要全时的</a>陪护（不管专业还是非专业<a href="#" class="tooltipwords" data-toggle="tooltip" title="">陪护</a>），陪护离开了数小时都不行	</h1>
+									<h1>病人只能卧床，需<a href="#" class="tootipwords" data-toggle="tooltip" title="">要全时的</a>陪护（不管专业还是非专业<a href="#" class="tooltipwords" data-toggle="tooltip" title="病人虽然不是一直卧床，但他/她要坐起时，需要大量的帮助才行">陪护</a>），<a href="#" class="tootipwords" data-toggle="tooltip" title="一般性的陪伴、照料和保护措施需求不应被视为“需要帮助”">陪护离开了数小时都不行</a></h1>
 								<?php break; ?>
 
 								<?php case 'ch-tr': ?>
-									<h1>病人只能卧在床上，需要（由受過培訓或未經培訓的人員）一直從旁協助，並且即使只有幾個小時也不能被獨留。<a href="#" class="tootipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>病人只能卧在床上，需要（<a href="#" class="tootipwords" data-toggle="tooltip" title="病人雖然不會維持卧床，但他/她要坐起時，需要大量的協助才能做到。">由受過培訓或未經培訓的人員</a>）一直從旁協助，<a href="#" class="tootipwords" data-toggle="tooltip" title="對一般陪伴、照料和保護措施的需求不應被視為需要協助。">並且即使只有幾個小時也不能被獨留。</a> </h1>
 								<?php break; ?>
 
 							<?php } ?>

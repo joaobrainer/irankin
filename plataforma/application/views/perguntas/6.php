@@ -30,7 +30,11 @@
 								<?php break; ?>
 
 								<?php case 'ch-sp': ?>
-									<h1>病人生活完全自理，并且完成所有工作和任务的能力跟卒中（中风）前没有什么不同	<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1><a href="#" class="tooltipwords" data-toggle="tooltip" title="身体情况允许，但由于法规的原因不能驾驶，不应算做“残疾”">病人生活</a>完全自理，<a href="#" class="tooltipwords" data-toggle="tooltip" title="卒中(中风)发生前每个月最少会做一次的事情">并且完成所有</a>工作和任务的能力跟卒中（中风）<a href="#" class="tooltipwords" data-toggle="tooltip" title="执行日常职责和活动的能力和卒中(中风) 前一样">前没有什么不同</a></h1>
+								<?php break; ?>
+
+								<?php case 'ch-tr': ?>
+									<h1><a href="#" class="tooltipwords" data-toggle="tooltip" title="在身體狀況允許下，但因法律原因而不能駕馭，該病人不應被視為殘疾。">病人是</a>完全獨立自理，能夠<a href="#" class="tooltipwords" data-toggle="tooltip" title="中風前每個月最少會做一次的事情">進行所有活動</a>與中風<a href="#" class="tooltipwords" data-toggle="tooltip" title="執行日常職責和活動能力和中風前一樣">前無異。</a></h1>
 								<?php break; ?>
 
 							<?php } ?>

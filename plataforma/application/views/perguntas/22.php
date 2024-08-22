@@ -29,11 +29,11 @@
 								<?php break; ?>
 
 								<?php case 'ch-sp': ?>
-									<h1>病人能够管理他/她自己的养老金/收入，以及安排支付账单，但存在些许困难？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>病人能够管理他/她自己的养老金/收入，以及安排支付账单，<a href="#" class="tooltipwords" data-toggle="tooltip" title="要从病人卒中（中风）前的处置能力上寻找变化。这个问题与财务权力、地位无关。它指的是病人是否有安排、处置自己钱财的能力。">但存在些许困难？</a></h1>
 								<?php break; ?>
 
 								<?php case 'ch-tr': ?>
-									<h1>病人能夠管理他/她自己的收入或退休金，並且安排支付帳單，但有一些/輕微的困難?<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>病人能夠管理他/她自己的收入或退休金，並且安排支付帳單，<a href="#" class="tooltipwords" data-toggle="tooltip" title="視乎責任上的改變。 這個問題無關財務狀況。 它指的是病人是否能負責處理自己錢財。">但有一些/輕微的困難?</a></h1>
 								<?php break; ?>
 
 							<?php } ?>
