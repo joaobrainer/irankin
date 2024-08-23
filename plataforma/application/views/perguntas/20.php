@@ -29,11 +29,11 @@
 								<?php break; ?>
 
 								<?php case 'ch-sp': ?>
-									<h1>也就是说，如果需要，病人能够自己完成基本日常家务，即使病人平常并不需要自己做家务, 但存在些许困难？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>也就是说，如果需要，<a href="#" class="tooltipwords" data-toggle="tooltip" title="尝试通过询问病人做家务的能力来确认">病人能够自己完成基本日常家务</a>，即使病人平常并不需要自己做家务, <a href="#" class="tooltipwords" data-toggle="tooltip" title="例如，找衣服、收拾衣服、饭后清理工作。排除那些不需要每天做的家务，比如使用吸尘器">但存在些许困难？</a></h1>
 								<?php break; ?>
 
 								<?php case 'ch-tr': ?>
-									<h1>因此，即使病人平時不用做基本的家務，如有需要，他/她仍能夠做這些家務，但有一些/輕微的困難。<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>因此，<a href="#" class="tooltipwords" data-toggle="tooltip" title="試著通過探索這個人做家務的能力來確認。">即使病人平時不用做基本的家務</a>，如有需要，他/她仍能夠做這些家務，<a href="#" class="tooltipwords" data-toggle="tooltip" title="例如，尋找和收拾衣服，飯後清理。排除不需要每天做的家務，例如使用吸塵機。">但有一些/輕微的困難。</a></h1>
 								<?php break; ?>
 
 							<?php } ?>

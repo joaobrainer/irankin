@@ -29,11 +29,11 @@
 								<?php break; ?>
 
 								<?php case 'ch-sp': ?>
-									<h1>病人使用厕所需要帮助吗？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1><a href="#" class="tooltipwords" data-toggle="tooltip" title="可以在没有帮助的情况下使用厕所是指：到达厕所、脱好裤子、清洁、系裤子、以及盥洗均自己完成">病人使用厕所需要帮助吗</a>?</h1>
 								<?php break; ?>
 
 								<?php case 'ch-tr': ?>
-									<h1>病人是否需要在協助下如廁？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1><a href="#" class="tooltipwords" data-toggle="tooltip" title="可以在沒有他人協助下使用廁所是指：到達廁所、脱好褲子、清潔自己、穿好褲子、以及離開馬桶均自行完成。">病人是否需要在協助下如廁</a>?</h1>
 								<?php break; ?>
 
 							<?php } ?>

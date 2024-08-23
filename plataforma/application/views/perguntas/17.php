@@ -29,11 +29,11 @@
 								<?php break; ?>
 
 								<?php case 'ch-sp': ?>
-									<h1>病人是否能够独立行走/移动，但需要使用拐杖或助行架/助行器？如果病人不需要任何辅助工具（拐杖/助行器），请标记“否”	<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>病人是否能够独立行走/移动，但需要使用拐杖或助行架/助行器？如果病人不需要任何辅助工具（拐杖/助行器），<a href="#" class="tooltipwords" data-toggle="tooltip" title="即使病人需要使用手杖、拐杖或助行器，也应该可以在没有他人帮助的情况下使用辅助设备独立转移”">请标记“否”</a></h1>
 								<?php break; ?>
 
 								<?php case 'ch-tr': ?>
-									<h1>病人是否能夠獨立用拐杖/手杖或助行架/助行器攙扶下自行走動/移動？如果病人不需要任何輔助工具（拐杖/手杖/助行器），請回答“否”。<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>病人是否能夠獨立用拐杖/手杖或助行架/助行器攙扶下自行走動/移動？如果病人不需要任何輔助工具（拐杖/手杖/助行器），<a href="#" class="tooltipwords" data-toggle="tooltip" title="即使病人需要使用手杖、拐杖或助行器，他/她應能在沒有他人協助下使用輔助設備獨立轉移">請回答“否”。</a></h1>
 								<?php break; ?>
 
 							<?php } ?>

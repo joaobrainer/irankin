@@ -29,11 +29,11 @@
 								<?php break; ?>
 
 								<?php case 'ch-sp': ?>
-									<h1>也就是说，病人在没有他人身体帮助、言语指导或监督的情况下无法步行穿过房间，或者只能坐轮椅（即使病人能够自行推进轮椅<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>也就是说，病人在没有他人身体帮助、言语指导或监督的情况下无法步行穿过房间，或者只能坐轮椅（<a href="#" class="tooltipwords" data-toggle="tooltip" title="对于使用轮椅，病人需要他人的帮助才能进出轮椅，但无需帮助就能自行推进。">即使病人能够自行推进轮椅</a>)</h1>
 								<?php break; ?>
 
 								<?php case 'ch-tr': ?>
-									<h1>因此，病人在沒有他人的肢體幫助或口頭指導或監督的情況下無法進出房間，或者只能坐在輪椅上（即使病人能夠自行推動）。<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>因此，病人在沒有他人的肢體幫助或口頭指導或監督的情況下無法進出房間，或者只能坐在輪椅上（<a href="#" class="tooltipwords" data-toggle="tooltip" title="有關使用輪椅，病人需要他人協助下才能上落輪椅，但能在沒有協助下自行推進。">即使病人能夠自行推動</a>）。</h1>
 								<?php break; ?>
 
 							<?php } ?>

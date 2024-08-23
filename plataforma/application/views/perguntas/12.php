@@ -29,11 +29,11 @@
 								<?php break; ?>
 
 								<?php case 'ch-sp': ?>
-									<h1>病人做一顿简单的饭是否需要帮助?	<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1><a href="#" class="tooltipwords" data-toggle="tooltip" title="例如，哪怕只是做早餐或小吃，如果病人尝试烹饪，都可能会有烧毁房子的风险。">病人做一顿简单的饭是否需要帮助</a>?</h1>
 								<?php break; ?>
 
 								<?php case 'ch-tr': ?>
-									<h1>病人是否需要在協助下準備簡易的餐點？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1><a href="#" class="tooltipwords" data-toggle="tooltip" title="例如，哪怕只是做早餐或小食時生火煮食，病人都可能會有燒毀房子的風險">病人是否需要在協助下準備簡易的餐點</a>?</h1>
 								<?php break; ?>
 
 							<?php } ?>

@@ -29,11 +29,11 @@
 								<?php break; ?>
 
 								<?php case 'ch-sp': ?>
-									<h1>病人进食需要帮助吗？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1><a href="#" class="tooltipwords" data-toggle="tooltip" title="病人在调整饮食以后可以独立进食（食物和用具可以由其它人准备和提供），这种情况不被视为“进食需要帮助”。">病人进食需要帮助吗？</a></h1>
 								<?php break; ?>
 
 								<?php case 'ch-tr': ?>
-									<h1>病人是否需要在協助下進食？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1><a href="#" class="tooltipwords" data-toggle="tooltip" title="經餐單調整後，病人可以獨立進食。食物和用具可以由他人提供。這不應算做一種協助。">病人是否需要在協助下進食？</a></h1>
 								<?php break; ?>
 
 							<?php } ?>

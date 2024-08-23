@@ -29,11 +29,11 @@
 								<?php break; ?>
 
 								<?php case 'ch-sp': ?>
-									<h1>病人能否自行到周边的商店买小物件，或者到附近的酒馆/茶室给自己点一杯饮品吗？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>病人能否自行到周边的商店买小物件，或者到附近的酒馆/茶室给自己点一<a href="#" class="tooltipwords" data-toggle="tooltip" title="至少能完成购买一件商品的能力">杯饮品吗？</a></h1>
 								<?php break; ?>
 
 								<?php case 'ch-tr': ?>
-									<h1>病人能夠自行外出，即使是到附近的商店購買單件商品嗎？或者病人能夠去酒館/酒吧，自己點並購買一杯飲品嗎？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>病人能夠自行外出，即使是到附近的商店購買單件商品嗎？或者病人能夠去酒館/酒吧，自己點並購買一<a href="#" class="tooltipwords" data-toggle="tooltip" title="至少能夠購買一件商品。">杯飲品嗎？</a></h1>
 								<?php break; ?>
 
 							<?php } ?>

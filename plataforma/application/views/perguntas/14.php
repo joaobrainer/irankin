@@ -29,11 +29,11 @@
 								<?php break; ?>
 
 								<?php case 'ch-sp': ?>
-									<h1>病人洗脸、梳头和刷牙/固定假牙需要帮助吗？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>病人洗脸、梳头和刷牙/<a href="#" class="tooltipwords" data-toggle="tooltip" title="由其它人准备用具，不应该被视为“需要帮助”">固定假牙需要帮助吗</a></h1>
 								<?php break; ?>
 
 								<?php case 'ch-tr': ?>
-									<h1>病人是否需要在協助下洗臉、梳頭髮和刷牙/裝上假牙？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>病人是否需要在協助下洗臉、<a href="#" class="tooltipwords" data-toggle="tooltip" title="由他人準備用具，不應被視為需要協助。">梳頭髮和刷牙/裝上假牙？</a></h1>
 								<?php break; ?>
 
 							<?php } ?>

@@ -32,12 +32,12 @@
 								<?php break; ?>
 
 								<?php case 'ch-sp': ?>
-									<h1>病人泡澡、冲澡或刮胡子需要少量的帮助吗？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>病人泡澡、冲澡或刮胡子需要少<a href="#" class="tooltipwords" data-toggle="tooltip" title="如果病人可以洗澡、淋浴或刮胡子，即使比平时花费更多的时间，请选择“否”。">量的帮助吗？</a></h1>
 									<p>说明：如果你认为病人不需要这种帮助，他/她应该比平时花更多的时间</p>
 								<?php break; ?>
 
 								<?php case 'ch-tr': ?>
-									<h1>病人是否需要在少許協助洗澡、淋浴或刮鬍子？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1>病人是否需要在少許協助洗澡、<a href="#" class="tooltipwords" data-toggle="tooltip" title="如果病人可以自己洗澡、淋浴或剃鬚，即使比平時花費更多的時間，請選擇“否”。">淋浴或刮鬍子？</a></h1>
 									<p>說明：如果您認為病人不需要那些協助，他/她應該比平時花費更多的時間。</p>
 								<?php break; ?>
 

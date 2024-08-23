@@ -29,11 +29,11 @@
 								<?php break; ?>
 
 								<?php case 'ch-sp': ?>
-									<h1>病人以往在家会照顾他人<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1><a href="#" class="tooltipwords" data-toggle="tooltip" title="例如照顾孩子、照顾伴侣、父母、孙子孙女或其他受抚养人">病人以往在家会照顾他人</a></h1>
 								<?php break; ?>
 
 								<?php case 'ch-tr': ?>
-									<h1>病人此前是否在家中照顧其他人？<a href="#" class="tooltipwords" data-toggle="tooltip" title=""></a></h1>
+									<h1><a href="#" class="tooltipwords" data-toggle="tooltip" title="例如照顧孩子、照顧伴侶、父母、孫子孫女或其他受撫養人。">病人此前是否在家中照顧其他人</a>?</h1>
 								<?php break; ?>
 
 							<?php } ?>
