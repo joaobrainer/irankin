@@ -18,4 +18,12 @@ class Respostas_model extends CI_Model {
 
                 return $this->db->insert('respostas_irankin', $dados);
         }
+
+        public function listarTodas()
+        {
+                return $this->db
+                        ->order_by('created_at', 'DESC')
+                        ->get('respostas_irankin')
+                        ->result_array();
+        }
 }
