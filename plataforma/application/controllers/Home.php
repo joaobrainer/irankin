@@ -13,13 +13,15 @@ class Home extends CI_Controller {
 			$this->session->set_userdata('lang', $_GET['lang']);
 		}
 
-		$this->session->set_userdata('pergunta', '');
-		$this->session->set_userdata('respostas_historia_usuario', array());
-		$this->session->set_userdata('pontuacao', '0');
+                $this->session->set_userdata('pergunta', '');
+                $this->session->set_userdata('respostas_historia_usuario', array());
+                $this->session->set_userdata('pontuacao', '0');
+                $this->session->set_userdata('respostas_usuario', array());
+                $this->session->set_userdata('respostas_salvas', false);
 
-		$this->load->view('home', $dados);
-		
-	}
+                $this->load->view('home', $dados);
+
+        }
 
 	public function loadValidation() {
 		

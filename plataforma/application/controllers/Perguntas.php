@@ -3,13 +3,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Perguntas extends CI_Controller {
 
+        public function __construct() {
+                parent::__construct();
+
+                $this->load->model('Respostas_model');
+
+                if ($this->session->userdata('respostas_usuario') === NULL) {
+                        $this->session->set_userdata('respostas_usuario', array());
+                }
+
+                if ($this->session->userdata('respostas_salvas') === NULL) {
+                        $this->session->set_userdata('respostas_salvas', false);
+                }
+        }
+
 	public function loadPergunta3() {
 
 		$dados['titulo'] = "iRankin";
 
-		if (isset($_GET['lang'])) {
-			switch ($_GET['lang']) {
-				case 'pt-br':
+                if (isset($_GET['lang'])) {
+                        switch ($_GET['lang']) {
+                                case 'pt-br':
 					$this->session->set_userdata('lang', 'pt-br');
 					break;
 				case 'en-us':
@@ -27,22 +41,27 @@ class Perguntas extends CI_Controller {
 				default:
 					$this->session->set_userdata('lang', 'en-us');
 					break;
-			}
-		}
+                        }
+                }
 
-		$this->session->set_userdata('pergunta', '3');
+                $this->session->set_userdata('respostas_usuario', array());
+                $this->session->set_userdata('respostas_salvas', false);
+
+                $this->session->set_userdata('pergunta', '3');
 
 		$this->load->view('perguntas/3', $dados);
 
 	}
 
-	public function resposta3() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta3() {
 
-		if ($primeira == 'Sim') {
-			redirect('perguntas/4');
-		} else {
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        redirect('perguntas/4');
+                } else {
 			redirect('perguntas/5');
 		}
 
@@ -58,13 +77,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta4() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta4() {
 
-		if ($primeira == 'Sim') {
-			$this->session->set_userdata('pontuacao', '4');
-			redirect('pontuacao');
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->session->set_userdata('pontuacao', '4');
+                        redirect('pontuacao');
 		} else {
 			$this->session->set_userdata('pontuacao', '5');
 			redirect('pontuacao');
@@ -87,15 +108,17 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta5() {
-		
-		$primeira = $this->input->post('sintomas');
-		$qnt = count($primeira);
+        public function resposta5() {
 
-		if ($primeira) {
-			if ($qnt == 1) {
-				foreach ($primeira as $row) {
-					if ($row == 'Motores') {
+                $primeira = $this->input->post('sintomas');
+
+                if ($primeira) {
+                        $this->registrarRespostaAtual($primeira);
+
+                        $qnt = count($primeira);
+                        if ($qnt == 1) {
+                                foreach ($primeira as $row) {
+                                        if ($row == 'Motores') {
 						redirect('perguntas/16');
 					}
 				}
@@ -130,13 +153,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta6() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta6() {
 
-		if ($primeira == 'Sim') {
-			$this->session->set_userdata('pontuacao', '1');
-			redirect('pontuacao');
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->session->set_userdata('pontuacao', '1');
+                        redirect('pontuacao');
 		} else {
 			redirect('perguntas/8');
 		}
@@ -234,13 +259,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta11() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta11() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('4');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('4');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->adicionaResposta('12');
 		} else {
@@ -260,13 +287,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta12() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta12() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('3');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('3');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->adicionaPontuacao('2');
 			$this->validaRespostas();
@@ -287,13 +316,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta13() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta13() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('4');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('4');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->adicionaPontuacao('2');
 			$this->validaRespostas();
@@ -314,13 +345,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta14() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta14() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('4');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('4');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->adicionaResposta('15');
 		} else {
@@ -340,13 +373,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta15() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta15() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('3');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('3');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->adicionaPontuacao('2');
 			$this->validaRespostas();
@@ -367,13 +402,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta16() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta16() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaResposta('17');
-		} elseif ($primeira == 'Não') {
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaResposta('17');
+                } elseif ($primeira == 'Não') {
 			$this->adicionaResposta('18');
 		} else {
 			$this->session->set_flashdata('error', 'error');
@@ -392,13 +429,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta17() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta17() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('3');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('3');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->adicionaPontuacao('2');
 			$this->validaRespostas();
@@ -419,13 +458,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta18() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta18() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('4');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('4');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->adicionaResposta('17');
 		} else {
@@ -445,13 +486,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta19() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta19() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('3');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('3');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->adicionaResposta('20');
 		} else {
@@ -471,13 +514,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta20() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta20() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('2');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('2');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->validaRespostas();
 		} else {
@@ -497,13 +542,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta21() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta21() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaResposta('22');
-		} elseif ($primeira == 'Não') {
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaResposta('22');
+                } elseif ($primeira == 'Não') {
 			$this->adicionaPontuacao('3');
 			$this->validaRespostas();
 		} else {
@@ -523,13 +570,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta22() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta22() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('2');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('2');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->validaRespostas();
 		} else {
@@ -549,13 +598,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta23() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta23() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('3');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('3');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->adicionaResposta('24');
 		} else {
@@ -575,13 +626,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta24() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta24() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('2');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('2');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->validaRespostas();
 		} else {
@@ -601,13 +654,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta25() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta25() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaResposta('26');
-		} elseif ($primeira == 'Não') {
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaResposta('26');
+                } elseif ($primeira == 'Não') {
 			$this->adicionaPontuacao('3');
 			$this->validaRespostas();
 		} else {
@@ -627,13 +682,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta26() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta26() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('2');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('2');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->validaRespostas();
 		} else {
@@ -653,13 +710,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta27() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta27() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaResposta('28');
-		} elseif ($primeira == 'Não') {
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaResposta('28');
+                } elseif ($primeira == 'Não') {
 			$this->validaRespostas();
 		} else {
 			$this->session->set_flashdata('error', 'error');
@@ -678,13 +737,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta28() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta28() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('2');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('2');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->adicionaPontuacao('3');
 			$this->validaRespostas();
@@ -705,13 +766,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta29() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta29() {
 
-		if ($primeira == 'Sim') {
-			$this->validaRespostas();
-		} elseif ($primeira == 'Não') {
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->validaRespostas();
+                } elseif ($primeira == 'Não') {
 			$this->adicionaResposta('30');
 		}
 
@@ -727,13 +790,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta30() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta30() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('2');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('2');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->validaRespostas();
 		} else {
@@ -755,13 +820,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta31() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta31() {
 
-		if ($primeira == 'Sim') {
-			redirect('perguntas/32');
-		} elseif ($primeira == 'Não') {
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        redirect('perguntas/32');
+                } elseif ($primeira == 'Não') {
 			$this->session->set_flashdata('error', 'error');
 			redirect('perguntas/9');
 		} else {
@@ -781,13 +848,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta32() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta32() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('2');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('2');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->validaRespostas();
 		} else {
@@ -807,13 +876,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta33() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta33() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('2');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('2');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->adicionaResposta('34');
 		} else {
@@ -833,13 +904,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta34() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta34() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('2');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('2');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->validaRespostas();
 		} else {
@@ -859,13 +932,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta35() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta35() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaResposta('36');
-		} elseif ($primeira == 'Não') {
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaResposta('36');
+                } elseif ($primeira == 'Não') {
 			$this->validaRespostas();
 		} else {
 			$this->session->set_flashdata('error', 'error');
@@ -884,13 +959,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta36() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta36() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('2');
-			$this->validaRespostas();
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('2');
+                        $this->validaRespostas();
 		} elseif ($primeira == 'Não') {
 			$this->adicionaPontuacao('3');
 			$this->validaRespostas();
@@ -911,13 +988,15 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta41() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta41() {
 
-		if ($primeira == 'Sim') {
-			$this->session->set_userdata('pontuacao', '4');
-			redirect('pontuacao');
+                $primeira = $this->input->post('primeira');
+
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->session->set_userdata('pontuacao', '4');
+                        redirect('pontuacao');
 		} else {
 			$this->session->set_userdata('pontuacao', '5');
 			redirect('pontuacao');
@@ -935,29 +1014,120 @@ class Perguntas extends CI_Controller {
 
 	}
 
-	public function resposta42() {
-		
-		$primeira = $this->input->post('primeira');
+        public function resposta42() {
 
-		if ($primeira == 'Sim') {
-			$this->adicionaPontuacao('2');
-			$this->validaRespostas();
-		} else {
-			$this->adicionaPontuacao('3');
-			$this->validaRespostas();
-		}
+                $primeira = $this->input->post('primeira');
 
-	}
+                $this->registrarRespostaAtual($primeira);
+
+                if ($primeira == 'Sim') {
+                        $this->adicionaPontuacao('2');
+                        $this->validaRespostas();
+                } else {
+                        $this->adicionaPontuacao('3');
+                        $this->validaRespostas();
+                }
+
+        }
+
+        private function registrarRespostaAtual($resposta) {
+
+                if ($resposta === NULL || $resposta === '') {
+                        return;
+                }
+
+                $pergunta = $this->session->userdata('pergunta');
+                $respostas = $this->session->userdata('respostas_usuario');
+
+                if (!is_array($respostas)) {
+                        $respostas = array();
+                }
+
+                $respostas[] = array(
+                        'pergunta' => $this->obterDescricaoPergunta($pergunta),
+                        'resposta' => $this->converterRespostaParaIngles($resposta),
+                );
+
+                $this->session->set_userdata('respostas_usuario', $respostas);
+        }
+
+        private function obterDescricaoPergunta($pergunta)
+        {
+                if ($pergunta === NULL || $pergunta === '') {
+                        return 'Question';
+                }
+
+                return 'Question ' . $pergunta;
+        }
+
+        private function converterRespostaParaIngles($resposta)
+        {
+                if (is_array($resposta)) {
+                        return array_map(array($this, 'converterRespostaParaIngles'), $resposta);
+                }
+
+                if (!is_string($resposta)) {
+                        return $resposta;
+                }
+
+                $mapa = array(
+                        'Sim' => 'Yes',
+                        'Não' => 'No',
+                        'Nao' => 'No',
+                        'nao' => 'No',
+                        'Nenhum' => 'None',
+                        'Motores' => 'Motor',
+                        'Desequilíbrio' => 'Imbalance',
+                        'Parestesia' => 'Paresthesia',
+                        'Incontinencia' => 'Incontinence',
+                        'Visuais' => 'Visual',
+                        'Dor' => 'Pain',
+                        'Higiene' => 'Hygiene',
+                        'Cognitivos' => 'Cognitive',
+                        'Vestirse' => 'Dressing',
+                        'Alimentacao' => 'Feeding',
+                        'Sensibilidade' => 'Sensitivity',
+                        'Deglutição' => 'Swallowing',
+                        'Fala' => 'Speech',
+                        'Depressão' => 'Depression',
+                        'Leitura' => 'Reading',
+                        'Escrita' => 'Writing',
+                        'Fadiga' => 'Fatigue',
+                );
+
+                return array_key_exists($resposta, $mapa) ? $mapa[$resposta] : $resposta;
+        }
+
+        private function salvarResultado() {
+
+                if ($this->session->userdata('respostas_salvas')) {
+                        return;
+                }
+
+                $respostas = $this->session->userdata('respostas_usuario');
+
+                if (!is_array($respostas)) {
+                        $respostas = array();
+                }
+
+                $this->Respostas_model->registrar(
+                        $this->session->userdata('lang'),
+                        $this->session->userdata('pontuacao'),
+                        $respostas
+                );
+
+                $this->session->set_userdata('respostas_salvas', true);
+        }
 
 
 
 
 
 
-	public function loadPontuacao() {
-		
-		if ($this->session->userdata('lang') == 'pt-br') {
-			$dados['titulo'] = "iRankin | Pontuação";
+        public function loadPontuacao() {
+
+                if ($this->session->userdata('lang') == 'pt-br') {
+                        $dados['titulo'] = "iRankin | Pontuação";
 		} elseif ($this->session->userdata('lang') == 'en-us') {
 			$dados['titulo'] = "iRankin | Grading Score";
 		} elseif ($this->session->userdata('lang') == 'es-es'){
@@ -966,17 +1136,20 @@ class Perguntas extends CI_Controller {
 			$dados['titulo'] = "iRankin | 评分";
 		}elseif ($this->session->userdata('lang') == 'ch-tr') {
 			$dados['titulo'] = "iRankin | 評估分數";
-		}else{
-			$dados['titulo'] = "iRankin | Grading Score";
-		}
+                }else{
+                        $dados['titulo'] = "iRankin | Grading Score";
+                }
 
-		$this->session->set_userdata('pergunta', '');
-		$this->session->set_userdata('array_pontuacao', array());
-		$this->session->set_userdata('respostas_historia_usuario', array());
+                $this->salvarResultado();
 
-		$this->load->view('pontuacao', $dados);
+                $this->session->set_userdata('pergunta', '');
+                $this->session->set_userdata('array_pontuacao', array());
+                $this->session->set_userdata('respostas_historia_usuario', array());
+                $this->session->set_userdata('respostas_usuario', array());
 
-	}
+                $this->load->view('pontuacao', $dados);
+
+        }
 
 	public function loadSobre() {
 		

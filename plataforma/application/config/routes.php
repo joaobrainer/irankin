@@ -102,3 +102,5 @@ $route['privacypolicy'] = 'home/loadPrivacyPolicy';
 
 $route['validation'] = 'home/loadValidation';
 $route['redirectValidation/(:any)'] = 'home/redirectValidation/$1';
+
+$route['responses-overview'] = 'respostas/index';
