@@ -12,7 +12,7 @@ class Respostas_model extends CI_Model {
                 $dados = array(
                         'lang' => $lang,
                         'pontuacao' => $pontuacao,
-                        'respostas' => json_encode($respostas),
+                        'respostas' => json_encode($respostas, JSON_UNESCAPED_UNICODE),
                         'created_at' => date('Y-m-d H:i:s'),
                 );
 

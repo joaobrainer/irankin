@@ -1044,11 +1044,58 @@ class Perguntas extends CI_Controller {
                 }
 
                 $respostas[] = array(
-                        'pergunta' => $pergunta,
-                        'resposta' => $resposta,
+                        'pergunta' => $this->obterDescricaoPergunta($pergunta),
+                        'resposta' => $this->converterRespostaParaIngles($resposta),
                 );
 
                 $this->session->set_userdata('respostas_usuario', $respostas);
+        }
+
+        private function obterDescricaoPergunta($pergunta)
+        {
+                if ($pergunta === NULL || $pergunta === '') {
+                        return 'Question';
+                }
+
+                return 'Question ' . $pergunta;
+        }
+
+        private function converterRespostaParaIngles($resposta)
+        {
+                if (is_array($resposta)) {
+                        return array_map(array($this, 'converterRespostaParaIngles'), $resposta);
+                }
+
+                if (!is_string($resposta)) {
+                        return $resposta;
+                }
+
+                $mapa = array(
+                        'Sim' => 'Yes',
+                        'Não' => 'No',
+                        'Nao' => 'No',
+                        'nao' => 'No',
+                        'Nenhum' => 'None',
+                        'Motores' => 'Motor',
+                        'Desequilíbrio' => 'Imbalance',
+                        'Parestesia' => 'Paresthesia',
+                        'Incontinencia' => 'Incontinence',
+                        'Visuais' => 'Visual',
+                        'Dor' => 'Pain',
+                        'Higiene' => 'Hygiene',
+                        'Cognitivos' => 'Cognitive',
+                        'Vestirse' => 'Dressing',
+                        'Alimentacao' => 'Feeding',
+                        'Sensibilidade' => 'Sensitivity',
+                        'Deglutição' => 'Swallowing',
+                        'Fala' => 'Speech',
+                        'Depressão' => 'Depression',
+                        'Leitura' => 'Reading',
+                        'Escrita' => 'Writing',
+                        'Fadiga' => 'Fatigue',
+                );
+
+                return array_key_exists($resposta, $mapa) ? $mapa[$resposta] : $resposta;
         }
 
         private function salvarResultado() {
