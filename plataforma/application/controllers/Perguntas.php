@@ -44,7 +44,13 @@ class Perguntas extends CI_Controller {
                         }
                 }
 
-                $this->session->set_userdata('respostas_usuario', array());
+                $respostasIdentificacao = $this->session->userdata('respostas_identificacao');
+
+                if (!is_array($respostasIdentificacao)) {
+                        $respostasIdentificacao = array();
+                }
+
+                $this->session->set_userdata('respostas_usuario', $respostasIdentificacao);
                 $this->session->set_userdata('respostas_salvas', false);
 
                 $this->session->set_userdata('pergunta', '3');
