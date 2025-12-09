@@ -24,16 +24,16 @@
 			<div class="row">
 				<div class="col-md-12 btnentrar">
 					<?php if ($language == 'pt-br') { ?>
-						<a href="<?php print_r(base_url('perguntas/3?lang=pt-br')) ?>" class="btn btnpt">Iniciar <i class="fas fa-angle-right"></i></a>
-					<?php } elseif ($language == 'en-us') { ?>
-						<a href="<?php print_r(base_url('perguntas/3?lang=en-us')) ?>" class="btn btnpt">Start <i class="fas fa-angle-right"></i></a>
-					<?php } elseif($language == 'es-es') { ?>
-						<a href="<?php print_r(base_url('perguntas/3?lang=es-es')) ?>" class="btn btnpt">Iniciar <i class="fas fa-angle-right"></i></a>
-					<?php } elseif ($language == 'ch-sp') { ?>
-						<a href="<?php print_r(base_url('perguntas/3?lang=ch-sp')) ?>" class="btn btnpt">开始 <i class="fas fa-angle-right"></i></a>
-					<?php }elseif ($language == 'ch-tr') { ?>
-						<a href="<?php print_r(base_url('perguntas/3?lang=ch-tr')) ?>" class="btn btnpt">開始 <i class="fas fa-angle-right"></i></a>
-					<?php }?>
+                                               <a href="<?php print_r(base_url('identificacao?lang=pt-br')) ?>" class="btn btnpt">Iniciar <i class="fas fa-angle-right"></i></a>
+                                        <?php } elseif ($language == 'en-us') { ?>
+                                               <a href="<?php print_r(base_url('identificacao?lang=en-us')) ?>" class="btn btnpt">Start <i class="fas fa-angle-right"></i></a>
+                                        <?php } elseif($language == 'es-es') { ?>
+                                               <a href="<?php print_r(base_url('identificacao?lang=es-es')) ?>" class="btn btnpt">Iniciar <i class="fas fa-angle-right"></i></a>
+                                        <?php } elseif ($language == 'ch-sp') { ?>
+                                               <a href="<?php print_r(base_url('identificacao?lang=ch-sp')) ?>" class="btn btnpt">开始 <i class="fas fa-angle-right"></i></a>
+                                        <?php }elseif ($language == 'ch-tr') { ?>
+                                               <a href="<?php print_r(base_url('identificacao?lang=ch-tr')) ?>" class="btn btnpt">開始 <i class="fas fa-angle-right"></i></a>
+                                        <?php }?>
 					
 				</div>
 			</div>

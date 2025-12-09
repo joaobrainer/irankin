@@ -24,30 +24,76 @@
                                                                                 <th scope="col">ID</th>
                                                                                 <th scope="col">Language</th>
                                                                                 <th scope="col">Score</th>
+                                                                                <th scope="col">Identification</th>
                                                                                 <th scope="col">Responses</th>
                                                                                 <th scope="col">Submitted at</th>
                                                                         </tr>
                                                                 </thead>
                                                                 <tbody>
                                                                         <?php foreach ($submissions as $submission): ?>
+                                                                                <?php
+                                                                                        $respostas = json_decode($submission['respostas'], true);
+
+                                                                                        $identificationLabels = array(
+                                                                                                'Patient name' => 'Patient name',
+                                                                                                'Respondent name' => 'Respondent name',
+                                                                                                'Respondent relationship' => 'Relationship',
+                                                                                                'Hospital name' => 'Hospital',
+                                                                                        );
+
+                                                                                        $identification = array(
+                                                                                                'Patient name' => null,
+                                                                                                'Respondent name' => null,
+                                                                                                'Respondent relationship' => null,
+                                                                                                'Hospital name' => null,
+                                                                                        );
+
+                                                                                        $questionResponses = array();
+
+                                                                                        if (is_array($respostas) && count($respostas) > 0) {
+                                                                                                foreach ($respostas as $resposta) {
+                                                                                                        $pergunta = isset($resposta['pergunta']) ? $resposta['pergunta'] : '';
+
+                                                                                                        if (array_key_exists($pergunta, $identification)) {
+                                                                                                                $identification[$pergunta] = isset($resposta['resposta']) ? $resposta['resposta'] : null;
+                                                                                                                continue;
+                                                                                                        }
+
+                                                                                                        $questionResponses[] = $resposta;
+                                                                                                }
+                                                                                        }
+
+                                                                                        $hasIdentification = array_filter($identification, function ($value) {
+                                                                                                return $value !== null && $value !== '';
+                                                                                        });
+                                                                                ?>
                                                                                 <tr>
                                                                                         <td><?= $submission['id']; ?></td>
                                                                                         <td class="text-uppercase fw-bold"><?= $submission['lang']; ?></td>
                                                                                         <td><span class="badge bg-info text-dark"><?= $submission['pontuacao']; ?></span></td>
                                                                                         <td class="small">
-                                                                                                <?php $respostas = json_decode($submission['respostas'], true); ?>
-                                                                                                <?php if (is_array($respostas) && count($respostas) > 0): ?>
+                                                                                                <?php if (count($hasIdentification) > 0): ?>
                                                                                                         <ul class="mb-0 ps-3">
-                                                                                                                <?php foreach ($respostas as $resposta): ?>
+                                                                                                                <?php foreach ($identification as $label => $value): ?>
+                                                                                                                        <?php if ($value !== null && $value !== ''): ?>
+                                                                                                                                <li><span class="fw-semibold"><?= $identificationLabels[$label]; ?>:</span> <span class="text-secondary"><?= $value; ?></span></li>
+                                                                                                                        <?php endif; ?>
+                                                                                                                <?php endforeach; ?>
+                                                                                                        </ul>
+                                                                                                <?php else: ?>
+                                                                                                        <span class="text-muted">No identification data</span>
+                                                                                                <?php endif; ?>
+                                                                                        </td>
+                                                                                        <td class="small">
+                                                                                                <?php if (count($questionResponses) > 0): ?>
+                                                                                                        <ul class="mb-0 ps-3">
+                                                                                                                <?php foreach ($questionResponses as $resposta): ?>
                                                                                                                         <?php
-                                                                                                                                $answer = isset($resposta['resposta']) && is_array($resposta['resposta'])
-                                                                                                                                        ? implode(', ', $resposta['resposta'])
-                                                                                                                                        : (isset($resposta['resposta']) ? $resposta['resposta'] : '');
+$answer = isset($resposta['resposta']) && is_array($resposta['resposta'])
+        ? implode(', ', $resposta['resposta'])
+        : (isset($resposta['resposta']) ? $resposta['resposta'] : '');
                                                                                                                         ?>
-                                                                                                                        <li>
-                                                                                                                                <span class="fw-semibold"><?= isset($resposta['pergunta']) ? $resposta['pergunta'] : 'Question'; ?>:</span>
-                                                                                                                                <span class="text-secondary"><?= $answer; ?></span>
-                                                                                                                        </li>
+                                                                                                                        <li><span class="fw-semibold"><?= isset($resposta['pergunta']) ? $resposta['pergunta'] : 'Question'; ?>:</span> <span class="text-secondary"><?= $answer; ?></span></li>
                                                                                                                 <?php endforeach; ?>
                                                                                                         </ul>
                                                                                                 <?php else: ?>
@@ -73,9 +119,9 @@
                 $(function() {
                         $('#responsesTable').DataTable({
                                 pageLength: 10,
-                                order: [[4, 'desc']],
+                                order: [[5, 'desc']],
                                 columnDefs: [
-                                        { targets: [3], orderable: false }
+                                        { targets: [3, 4], orderable: false }
                                 ]
                         });
                 });

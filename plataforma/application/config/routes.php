@@ -54,6 +54,8 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['consentimento'] = 'home/loadConsentimento';
+$route['identificacao'] = 'home/loadIdentificacao';
+$route['identificacao/salvar'] = 'home/salvarIdentificacao';
 
 $route['perguntas/3'] = 'perguntas/loadPergunta3';
 $route['perguntas/4'] = 'perguntas/loadPergunta4';
